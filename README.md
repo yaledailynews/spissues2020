@@ -46,5 +46,4 @@ that can show off a small, fixed number of stories divided into different
 sections. We don't know exactly which sections and stories are going to be in
 the paper yet, so don't worry about getting all of the details exactly right! As
 long as there is a clear structure for how the page is organized and can adapt
-to different sections (maybe with a nav bar or something), we can customize it
-once we know the details.
+to different sections, we can customize it once we know the details.
