@@ -1,0 +1,35 @@
+<div class="category-page">
+  <section id="category" class="container category">
+    <h1 class="covid-stories-title">Spissues 2020</h1>
+    <p class="covid-stories-desc">WKND stories</p>
+      {{#each stories.WKND}}
+      <a class="link-wrap" href="https://yaledailynews.com/">
+        <article class="story covid-stories-card">
+          <div>
+            <img class='covid-stories-card-image' src='{{this.imageURL}}'>
+          </div>
+          <div style="flex-grow: 1">
+            <h1 class="covid-stories-card-title">{{this.title}}</h1>
+            <div class="covid-stories-card-excerpt"><p>{{this.blurb}}</p></div>
+            <p class="covid-stories-card-byline">By {{this.authors}}</p>
+          </div>
+        </article>
+      </a>
+      {{/each}}
+    <p class="covid-stories-desc">opinion stories</p>
+      {{#each stories.opinion}}
+      <a class="link-wrap" href="https://yaledailynews.com/">
+        <article class="story covid-stories-card">
+          <div>
+            <img class='covid-stories-card-image' src='{{this.imageURL}}'>
+          </div>
+          <div style="flex-grow: 1">
+            <h1 class="covid-stories-card-title">{{this.title}}</h1>
+            <div class="covid-stories-card-excerpt"><p>{{this.blurb}}</p></div>
+            <p class="covid-stories-card-byline">By {{this.authors}}</p>
+          </div>
+        </article>
+      </a>
+      {{/each}}
+  </section>
+</div>

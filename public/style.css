@@ -1,0 +1,600 @@
+a, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background: transparent;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  position: relative;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: decimal;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title], acronym[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+i, em {
+  font-style: oblique;
+}
+
+i i, i em, em i, em em {
+  font-style: normal;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+a:focus {
+  outline: 1px dotted;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Avenir-Light";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Light.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Light.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Medium.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Medium.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-Roman";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Roman.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Roman.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Heavy.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Heavy.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-Black";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Black.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-Black.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-LightOblique";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-LightOblique.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-LightOblique.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-MediumOblique";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-MediumOblique.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-MediumOblique.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-HeavyOblique";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-HeavyOblique.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-HeavyOblique.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-BlackOblique";
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-BlackOblique.ttf) format("woff");
+  src: url(https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/fonts/Avenir/Avenir-BlackOblique.woff) format("truetype");
+}
+
+body, #mobile-header #mobile-xc, header#site-header nav#site-navigation a {
+  font-family: "Avenir", "Open Sans", "Helvetica-Neue", "Arial", "Helvetica", sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+body {
+  background-color: #f6f4f4;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+a {
+  outline: none !important;
+}
+
+#mobile-header {
+  height: 50px;
+  background-color: white;
+  padding: 25px 0px 10px 10px;
+  display: none;
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15), 0 -5px 3px -10px #fff;
+}
+
+#mobile-header img {
+  height: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -18px;
+}
+
+#mobile-header #mobile-xc {
+  text-decoration: none;
+  height: 30px;
+  width: 30px;
+  margin-top: -28px;
+  margin-right: 12.5px;
+  display: inline-block;
+  vertical-align: bottom;
+  float: right;
+  text-align: center;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #191919;
+}
+
+#mobile-header .menu-link {
+  position: absolute;
+  color: #191919;
+  margin-top: -7px;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#mobile-navigation {
+  overflow-y: auto;
+  height: 100%;
+  background-color: white;
+  opacity: 0.975;
+  z-index: 4;
+  left: -200px;
+  /*left or right and the width of your navigation panel*/
+  width: 200px;
+  /*should match the above value*/
+  border-right: 3px solid #2a9dea;
+}
+
+#mobile-navigation #nav-search-left {
+  display: none;
+  margin-bottom: 10px;
+  margin-left: 7px;
+}
+
+#mobile-navigation i.first-row {
+  display: inline;
+  float: right;
+  margin-top: -35px;
+  margin-right: 10px;
+}
+
+#mobile-navigation a {
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  padding: 0.9em 1em 0.9em 1em;
+  outline: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  transition: border-left 0.25s ease;
+  overflow-y: visible;
+}
+
+#mobile-navigation a.fa-times {
+  padding: 0.8em;
+}
+
+#mobile-navigation a:hover {
+  transition: border-left 0.25s ease;
+}
+
+#mobile-navigation #nav-close-button {
+  color: #191919;
+}
+
+#mobile-navigation #nav-close-button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+#mobile-navigation #tag-home {
+  border-left: 5px solid #191919;
+}
+
+.responsive-head a {
+  padding-left: 11px !important;
+  padding-right: 11px !important;
+}
+
+@media (max-width: 860px) {
+  nav#site-navigation a {
+    font-size: 10px !important;
+    padding: 2px !important;
+  }
+  #nav-search {
+    font-size: 12px;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+
+header#site-header {
+  background-color: white;
+  padding: 10px 0 0;
+}
+
+header#site-header a {
+  text-decoration: none;
+}
+
+header#site-header h1.masthead-logo {
+  background: no-repeat url("https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/images/YDN_Nameplate_Big.gif");
+  background-size: 390px 85px;
+  color: transparent;
+  width: 390px;
+  height: 85px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+header#site-header nav#site-navigation {
+  background-color: #021931;
+  text-align: center;
+  z-index: 100;
+  border-bottom: 1px solid #ddd;
+}
+
+header#site-header nav#site-navigation a {
+  line-height: 1.2;
+  padding: 10px;
+  display: inline-block;
+  font-size: 0.8em;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+header#site-header nav#site-navigation a:hover#small-logo {
+  box-shadow: none;
+}
+
+header#site-header nav#site-navigation a#small-logo {
+  display: none;
+  vertical-align: middle;
+  padding: 0;
+}
+
+header#site-header nav#site-navigation a#small-logo h1.small-logo {
+  background: no-repeat url("https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/images/blue Y no background.png");
+  background-size: 25px auto;
+  color: transparent;
+  background-position: center;
+  height: 35px;
+}
+
+header#site-header nav#site-navigation #nav-search {
+  color: #bbb;
+  line-height: 1.2;
+  padding: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+header#site-header nav#site-navigation #nav-search .search-box {
+  display: none;
+  background-color: white;
+  width: 300px;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+}
+
+header#site-header nav#site-navigation #nav-search:hover {
+  cursor: pointer;
+}
+
+header#site-header nav#site-navigation #nav-search input:focus {
+  outline: none;
+}
+
+.category-page section {
+  padding-top: 0;
+}
+
+@media (max-width: 480px) {
+  .category-page .category {
+    padding-top: 0 !important;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .category-page .category {
+    padding-top: 0 !important;
+  }
+}
+
+.category-page #weekend.container {
+  margin-top: 25px;
+}
+
+.category-page #magazine.container {
+  border-bottom: none;
+}
+
+.category-page .top-headline-article {
+  margin-top: 85px;
+}
+
+.card.category-card {
+  border-bottom: none !important;
+  background-color: #999;
+}
+
+.card.category-card h1 {
+  font-family: 'Playfair Display', "Georgia", serif;
+  font-weight: bolder;
+  font-style: italic;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+  vertical-align: middle;
+  top: 30%;
+}
+
+@media (max-width: 480px) {
+  .card.category-card h1 {
+    top: 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card.category-card {
+    height: 100px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card.category-card {
+    padding-top: 0;
+  }
+}
+
+.card.sports-blog-card {
+  border-bottom: none !important;
+  background-color: #0b549b;
+  font-family: 'Playfair Display', "Georgia", serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.card.sports-blog-card h1 {
+  color: white;
+  font-size: 25px;
+  letter-spacing: 2px;
+  vertical-align: middle;
+  top: 25%;
+}
+
+@media (max-width: 720px) {
+  .card.sports-blog-card h1 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card.sports-blog-card h1 {
+    top: 7%;
+  }
+}
+
+.card.sports-blog-card h3 {
+  color: white;
+  top: 25%;
+}
+
+@media (max-width: 720px) {
+  .card.sports-blog-card h3 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card.sports-blog-card h3 {
+    top: 7%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card.sports-blog-card {
+    height: 100px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card.sports-blog-card {
+    padding-top: 0;
+  }
+}
+
+.covid-stories-title {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-weight: 800;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.covid-stories-desc {
+  letter-spacing: normal;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+}
+
+.covid-stories-smalldesc {
+  font-size: 14px;
+}
+
+.covid-stories-card {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  border-width: 2px !important;
+  height: auto;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  margin-bottom: 40px;
+  transition: all 0.25s ease;
+}
+
+.covid-stories-card:hover {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.36);
+  transform: translateX(-1px) translateY(-1px);
+}
+
+.covid-stories-card-title {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-weight: 800;
+  font-size: 24px;
+  padding: 15px;
+  font-style: italic;
+  color: #021931 !important;
+  letter-spacing: normal;
+}
+
+.covid-stories-card-excerpt > p {
+  font-family: "Avenir", "Open Sans", "Helvetica-Neue", "Arial", "Helvetica", sans-serif;
+  color: black;
+  letter-spacing: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: normal;
+  padding: 0 15px 15px 15px;
+}
+
+.covid-stories-card-image {
+  width: 130px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.covid-stories-card-byline {
+  font-family: "Avenir", "Open Sans", "Helvetica-Neue", "Arial", "Helvetica", sans-serif;
+  color: black;
+  letter-spacing: normal;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 0 15px 15px 15px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
