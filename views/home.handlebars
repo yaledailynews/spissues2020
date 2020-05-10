@@ -1,21 +1,70 @@
-<body style="margin:0px;padding:0px;overflow:hidden">
-    <iframe frameborder="0" style="overflow:hidden;height:100vh;width:100%" height="100vh" width="100%" src="https://spark.adobe.com/page/sazezGHZdvS7J/" scrolling="yes" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-  <!-- ngg_resource_manager_marker --><!-- ngg_resource_manager_marker --><!-- Instagram Feed JS -->
-<script type="text/javascript">
-var sbiajaxurl = "https://yaledailynews.com/wp-admin/admin-ajax.php";
-</script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var sb_instagram_js_options = {"sb_instagram_at":"","font_method":"svg"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://yaledailynews.com/wp-content/plugins/instagram-feed/js/sb-instagram.min.js?ver=1.10.2"></script>
-<script type="text/javascript" src="https://yaledailynews.com/wp-content/plugins/easy-twitter-feed-widget/lib/js/widget-easy-twitter-feed-widget.js?ver=1.0"></script>
-<script type="text/javascript" src="https://yaledailynews.com/wp-includes/js/wp-embed.min.js?ver=5.4.1"></script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var countVars = {"disqusShortname":"yaledailynews"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://yaledailynews.com/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=5.4.1"></script>
-<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.c63890edc4243ee77048d507b181eeec.html?origin=https%3A%2F%2Fyaledailynews.com" title="Twitter settings iframe" style="display: none;"></iframe></body>
+<style>
+  body, html {
+  height: 100%;
+  margin: 0;
+  font-family: ltc-bodoni-175,sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+}
+
+/* Images used */
+#img1 { background-image: url("https://i.insider.com/5d66d21e6f24eb396b6c8192?width=1100&format=jpeg&auto=webp"); }
+#img2 { background-image: url("https://i.kym-cdn.com/entries/icons/facebook/000/030/029/cover2.jpg"); }
+#img3 { background-image: url("https://methodshop.com/wp-content/uploads/sadkeanu-helmet.jpg"); }
+#img4 { background-image: url("https://uproxx.com/wp-content/uploads/2019/06/keanu-always-be-my-maybe.jpg?quality=100"); }
+#img5 { background-image: url("https://i.kym-cdn.com/entries/icons/facebook/000/030/029/cover2.jpg"); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: absolute; /* Stay fixed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+.bg-image{
+  background-size: contain;
+  object-fill: cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+</style>
+
+<body>
+  <a href='/other'>other</a>
+  <div class="bg-image" id="img5">
+    <div class="bg-text">News</div>
+  </div>
+  <div class="bg-image" id="img2">
+    <div class="bg-text">Sports</div>
+  </div>
+  <div class="bg-image" id="img3">
+    <div class="bg-text">University</div>
+  </div>
+  <div class="bg-image" id="img4">
+    <div class="bg-text">WKND</div>
+  </div>
+
+</body>
