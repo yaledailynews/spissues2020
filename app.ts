@@ -95,7 +95,7 @@ app.get('/', function (_req, res) {
 });
 
 app.get('/other', function (_req, res) {
-  res.render('other', { data: 'string' });
+  res.render('other', { stories });
 });
 
 app.listen(3000);
