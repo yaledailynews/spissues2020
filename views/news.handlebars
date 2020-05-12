@@ -1,0 +1,107 @@
+<style>
+html {
+  scroll-behavior: smooth;
+ }
+.bg-image{
+  background-size: contain;
+  object-fill: cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-image::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000000 100%);
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+}
+.center {
+  position: absolute; /* Stay fixed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -5%;
+}
+#headerimg { background-image: url(https://admissions.yale.edu/sites/default/files/styles/flexslider_full/public/2010_05_10_19_03_37_central_campus_1.jpg?itok=1hVNjje6); }
+</style>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Game</title>
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="public/grayscale.css" />
+
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.gif"/>
+    <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43236633-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+<div class="bg-image" id="headerimg">
+  <span class="title">News</span>
+</div>
+<div class="center">
+  <a href="#about" class="btn btn-circle page-scroll">
+    <i class="fa fa-angle-double-down animated"></i>
+  </a>
+</div>
+<!-- About Section -->
+<section id="about" class="container abouttext">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <p style="padding-top: 3%;">Steeped in history, the Yale-Harvard football game is one of the oldest, grandest traditions in college athletics. The 131st Game kicks off this weekend with more than simple bragging rights on the line: The winner takes home the Ivy League crown. Over the course of this week, the News will cover the legendary Ivy League rivalry through an innovative lens. Check back to find a series of articles — ranging from historical recaps to exclusive interviews — filled with in-depth reporting and stunning multimedia leading up to Saturday's matchup. Come to The Game informed. Follow <a href="http://twitter.com/YDNSports">@YDNSports</a> on Twitter and @yaledailynews on Snapchat for minute-by-minute updates with <a href="https://twitter.com/search?q=%23thegame14&src=typd">#TheGame14</a>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="category-page">
+  <section id="category">
+      {{#each stories.WKND}}
+      <a class="link-wrap" href="https://yaledailynews.com/">
+        <article class="story articlecontainer" style="background-image: url({{this.imageURL}}); ">
+          <div class="darkenimage">
+            <h1 class="articletext">{{this.title}}</h1>
+            <div class="articleblurb">{{this.blurb}}</div>
+            <div class="articleauthor">By {{this.authors}}</div>
+          </div>  
+        </article>
+      </a>
+      {{/each}}
+
+  </section>
+</div>
+
+</body>

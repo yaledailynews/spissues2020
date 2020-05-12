@@ -94,6 +94,10 @@ app.get('/', function (_req, res) {
   res.render('home', { stories });
 });
 
+app.get('/news', function (_req, res) {
+  res.render('news', { stories });
+});
+
 app.get('/other', function (_req, res) {
   res.render('other', { data: 'string' });
 });
