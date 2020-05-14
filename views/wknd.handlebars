@@ -29,166 +29,184 @@
 </head>
 
 <body>
-<div class="bg-image" id="headerimg">
-  <span class="title">WKND</span>
-</div>
-<div class="center">
-  <a href="#about" class="btn btn-circle page-scroll">
-    <i class="fa fa-angle-double-down animated"></i>
+  <div class="topBar">
+    <div class="navOptions">
+      <ul class="list">
+          <li class="option">
+              <a class="link" href="/news">News</a>
+          </li>
+          <li class="option">
+              <a class="link" href="/sports">Sports</a>
+          </li>
+          <li class="option">
+              <a class="link" href="/opinion">Opinion</a>
+          </li>
+          <li class="option">
+              <a class="link" href="/wknd">WKND</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <div class="bg-image" id="headerimg">
+    <span class="title">WKND</span>
+  </div>
+  <div class="center">
+    <a href="#about" class="btn btn-circle page-scroll">
+      <i class="fa fa-angle-double-down animated"></i>
+    </a>
+    <div id="about"></div>
+  </div>
+  <!-- About Section -->
+  <div class="abouttext">
+    A compilation of the Class of 2020’s favorite songs, study spots, pizza restaurants, and more — a tribute to the people, memories and places that made the last four years so special. 
+  </div>
+
+  <!-- SPOTIFY -->
+  <iframe id="spotify" src="https://open.spotify.com/embed/playlist/1WMd6tBu2HiRcLCBhREeZN" width="70%" height="50%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+  <!-- YOUTUBE AND APPLE MUSIC ICON LINKS TO PLAYLIST -->
+  <div style="margin-bottom: 3%;">
+    <a style="color: red;" class="youtube-icon" href="https://www.youtube.com/watch?v=zwB-2-YQEy4&list=PL3n70UwAAfQJ6B5dQSxJ26v32yuaUtW6H">
+      <i class="fa fa-youtube-play"></i>
+    </a>
+    <a href="https://music.apple.com/us/playlist/yale-daily-news-commencement-playlist/pl.u-d2b00PVsp0lNDd" style="display:inline-block;overflow:hidden;background:url(https://tools.applemusic.com/embed/v1/app-icon.svg) no-repeat;width:40px;height:40px;"></a>
+  </div>
+
+  <!-- BEST OF OVERHEARD -->
+  <img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
+  
+  <!-- POEM -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.0.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.0.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.0.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.0.authors}}</div>
+        </div>  
+    </article>
   </a>
-  <div id="about"></div>
-</div>
-<!-- About Section -->
-<div class="abouttext">
-  A compilation of the Class of 2020’s favorite songs, study spots, pizza restaurants, and more — a tribute to the people, memories and places that made the last four years so special. 
-</div>
 
-<!-- SPOTIFY -->
-<iframe id="spotify" src="https://open.spotify.com/embed/playlist/1WMd6tBu2HiRcLCBhREeZN" width="70%" height="50%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-<!-- YOUTUBE AND APPLE MUSIC ICON LINKS TO PLAYLIST -->
-<div style="margin-bottom: 3%;">
-  <a style="color: red;" class="youtube-icon" href="https://www.youtube.com/watch?v=zwB-2-YQEy4&list=PL3n70UwAAfQJ6B5dQSxJ26v32yuaUtW6H">
-     <i class="fa fa-youtube-play"></i>
+  <!-- SENIOR LETTER 4 -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.1.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.1.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.1.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.1.authors}}</div>
+        </div>  
+    </article>
   </a>
-  <a href="https://music.apple.com/us/playlist/yale-daily-news-commencement-playlist/pl.u-d2b00PVsp0lNDd" style="display:inline-block;overflow:hidden;background:url(https://tools.applemusic.com/embed/v1/app-icon.svg) no-repeat;width:40px;height:40px;"></a>
-</div>
 
-<!-- BEST OF OVERHEARD -->
-<img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
+  <!-- PRECONCEIVED NOTIONS -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.2.imageURL}});">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.2.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.2.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.2.authors}}</div>
+        </div>  
+    </article>
+  </a>
 
-<!-- POEM -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.0.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.0.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.0.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.0.authors}}</div>
-      </div>  
-  </article>
+  <!-- WHAT RESTAURANT ARE YOU? QUIZ -->
+  <iframe style="margin: 0 auto; display: block; margin-bottom: 3%;" class="quiz" id="interactApp5ebb0fa1cbde7d0014403442" width="70%" height="80%"  allowTransparency="true" frameborder="0" src="https://quiz.tryinteract.com/#/5ebb0fa1cbde7d0014403442?method=iframe"></iframe>  
+
+  <!-- SENIOR LETTER 2 -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.3.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.3.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.3.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.3.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- A PLAYER'S POINT OF VIEW -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.4.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.4.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.4.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.4.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- SPEAKER QUOTE COMPILATION -->
+  <img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
+
+  <!-- LESSON LEARNED -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.5.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.5.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.5.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.5.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- YALE LOVE LETTER 5 -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.6.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.6.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.6.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.6.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- ALIGNMENT CHART -->
+  <img src="/public/imgs/WKND/WKND3.jpg" class="alignmentchart">
+
+  <!-- QUINTESSENTIAL YALE STORY -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.7.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.7.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.7.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.7.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- NOSTALGIA FOR YALE -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.8.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.8.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.8.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.8.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- YALE 2020 RERUN -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.9.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.9.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.9.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.9.authors}}</div>
+        </div>  
+    </article>
 </a>
 
-<!-- SENIOR LETTER 4 -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.1.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.1.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.1.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.1.authors}}</div>
-      </div>  
-  </article>
-</a>
+  <!-- 2020 FAVS (PIE CHARTS) -->
+  <img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
 
-<!-- PRECONCEIVED NOTIONS -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.2.imageURL}});">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.2.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.2.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.2.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- WHAT RESTAURANT ARE YOU? QUIZ -->
-<iframe style="margin: 0 auto; display: block; margin-bottom: 3%;" class="quiz" id="interactApp5ebb0fa1cbde7d0014403442" width="70%" height="80%"  allowTransparency="true" frameborder="0" src="https://quiz.tryinteract.com/#/5ebb0fa1cbde7d0014403442?method=iframe"></iframe>  
-
-<!-- SENIOR LETTER 2 -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.3.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.3.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.3.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.3.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- A PLAYER'S POINT OF VIEW -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.4.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.4.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.4.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.4.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- SPEAKER QUOTE COMPILATION -->
-<img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
-
-<!-- LESSON LEARNED -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.5.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.5.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.5.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.5.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- YALE LOVE LETTER 5 -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.6.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.6.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.6.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.6.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- ALIGNMENT CHART -->
-<img src="/public/imgs/WKND/WKND3.jpg" class="alignmentchart">
-
-<!-- QUINTESSENTIAL YALE STORY -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.7.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.7.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.7.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.7.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- NOSTALGIA FOR YALE -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.8.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.8.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.8.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.8.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- YALE 2020 RERUN -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.9.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.9.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.9.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.9.authors}}</div>
-      </div>  
-  </article>
-</a>
-
-<!-- 2020 FAVS (PIE CHARTS) -->
-<img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
-
-<!-- YALE LOVE LETTER 2 (TD MUSIC ROOM) -->
-<a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.10.imageURL}}); ">
-      <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.10.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.10.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.10.authors}}</div>
-      </div>  
-  </article>
-</a>
+  <!-- YALE LOVE LETTER 2 (TD MUSIC ROOM) -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.10.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.10.title}}</h1>
+          <div class="articleblurb">{{stories.WKND.10.blurb}}</div>
+          <div class="articleauthor">By {{stories.WKND.10.authors}}</div>
+        </div>  
+    </article>
+  </a>
 
 <!-- DEAR PAULI MURRAY DINING HALL -->
 <a class="link-wrap" href="https://yaledailynews.com/">
@@ -239,6 +257,5 @@
 
 <!-- SENIOR QUOTES -->
 <img src="/public/imgs/WKND/Senior_Quotes.jpg" class="seniorquotes">
-
 
 </body>

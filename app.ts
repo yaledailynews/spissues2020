@@ -88,7 +88,6 @@ const stories = {
   opinion: [...Array(8)].map(() => generateStory('Opinion')),
   News: [...Array(33)].map(() => generateStory('News')),
   sports: [...Array(9)].map(() => generateStory('Sports')),
-
 };
 
 app.use('/public', express.static(join(__dirname, 'public')));
