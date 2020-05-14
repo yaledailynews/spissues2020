@@ -3,7 +3,47 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
+html {
+  scroll-behavior: smooth;
+ }
+.bg-image{
+  background-size: contain;
+  object-fill: cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-image::after {
+  display: inline-block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #000000 100%);
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+}
+#spotify {
+  display: block;
+  margin: 0 auto;
+}
+.youtube-icon {
+    font-size:9vh;
+    margin-left: 45%;
+}
+.extra {
+  width: 80vw;
+  margin: auto;
+  display: block;
+  margin-bottom: 3%;
+}
+.center {
+  position: absolute; /* Stay fixed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -5%;
+}
 body {
     width: 100%;
     height: 100%;
@@ -19,7 +59,7 @@ html {
 
 .title {
   color: white;
-  font-size: 100px;
+  font-size: 8vw;
   font-style: normal;
   font-weight: 400;
   text-transform: none;
@@ -61,18 +101,25 @@ html {
 .abouttext {
     height: auto;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 2%;
     width: 80vw;
     font-family: ltc-bodoni-175,sans-serif;
-    padding-bottom: 3%;
+    font-size: 1.7vw;
+    line-height: 120%;
+    margin-bottom: 3%;
 }
 .articletext {
     height: auto;
     margin: auto;
     width: 80vw;
     color: white;
-    font-family: ltc-bodoni-175,sans-serif;
-    font-size: 30px;
+    font-family: 'Bitter', serif;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5vw;
     padding-top: 6%;
 }
 .articleblurb {
@@ -80,9 +127,10 @@ html {
     margin: auto;
     width: 80vw;
     color: white;
-    font-size: 16px;
+    font-size: 1.7vw;
     padding-top: 2%;
     padding-bottom: 2%;
+    line-height: 120%;
     font-family: ltc-bodoni-175,sans-serif;
 }
 .articleauthor {
@@ -90,7 +138,7 @@ html {
     margin: auto;
     width: 80vw;
     color: white;
-    font-size: 14px;
+    font-size: 1.2vw;
     padding-bottom: 6%;
     font-family: ltc-bodoni-175,sans-serif;
 }
@@ -223,52 +271,6 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
-    0 {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@-moz-keyframes pulse {    
-    0 {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -moz-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(../img/gameday.png) no-repeat center center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 @media(min-width:767px) {
     .content-section {
         padding-top: 80px;
@@ -277,23 +279,7 @@ a:focus {
     .section-two {
         padding-top: 20px;
 
-
     }
-
-
-}
-
-@media(max-width:767px){
-    .content-section{ 
-        padding-top: 40px;
-
-    }
-        .section-two {
-        padding-top: 20px;
-
-
-    }
-
 }
 
 .btn {
@@ -319,70 +305,135 @@ a:focus {
     background-color: #219ab3;
 }
 
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        margin-top: 15px;
+@media(max-width:1100px) {
+    .center {
+        margin-top: -16%;
     }
-}
-
-@media(max-width:767px) {
-    ul.banner-social-buttons li {
+    #site-header {
+        display: none;
+    }
+    #mobile-header {
         display: block;
-        margin-bottom: 20px;
-        padding: 0;
     }
-
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
+    .articletext {
+        font-size: 5vw;
+    }
+    .title {
+        font-size: 20vw;
+    }
+    .articleblurb {
+        font-size: 3vw;
+        line-height: 120%;
+    }
+    .articleauthor {
+        font-size: 2vw;
+    }
+    .abouttext {
+        font-size: 3vw;
+        line-height: 120%;
+        padding-bottom: 5%;
+    }
+    .btn-circle {
+        width: 5vw;
+        height: 5vh;
+        padding: .2em .5em;
+        border-radius: 1em;
+        font-size: 8vw;
+    }
+    iframe {
+        width: 80%;
+    }
+    .youtube-icon {
+        font-size:7vh;
+        margin-left: 36%;
+    }
+    #spotify {
+        margin-bottom: 2%;
     }
 }
 
-footer {
-    padding: 50px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
-}
-
-body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
-}
-
-@media(max-width:500px) {
-    #logo {
-        width: 350px;
-        height: 350px;
-
+@media(min-width:750px) and (max-width:1200px) {
+    #site-header {
+        display: block;
     }
-    .section-two {
-        padding-top: 20px;
+    #mobile-header {
+        display: none;
     }
-    .content-section {
-        padding-top: 20px;
+    .center {
+        margin-top: -20%;
+    }
+    .btn-circle {
+        width: 2vw;
+        height: 2vh;
+        padding: .2em .5em;
+        border-radius: 1em;
+        font-size: 7vw;
+    }
+    .abouttext {
+        margin-top: -5%;
+    }
+    .youtube-icon {
+        font-size:6vh;
+        margin-left: 42%;
+    }
 }
+@media(min-width:1000px) and (max-width:1200px) {
+    .youtube-icon {
+        font-size:4vh;
+        margin-left: 45%;
+    }
+}
+@media(max-width:370px) {
+    .youtube-icon {
+        font-size: 9vh;
+        margin-left: 33%;
+    }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 0 0 4vw 4vw;
+  text-decoration: none;
+  font-size: 8vw;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+#bar_nav {
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#shift {
+    margin-top: -9%;
+    width: 5vw;
 }
