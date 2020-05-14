@@ -87,7 +87,7 @@ const stories = {
   WKND: [...Array(15)].map(() => generateStory('WKND')),
   opinion: [...Array(5)].map(() => generateStory('Opinion')),
   News: [...Array(5)].map(() => generateStory('News')),
-  sports: [...Array(5)].map(() => generateStory('sports')),
+  sports: [...Array(5)].map(() => generateStory('Sports')),
 
 };
 
