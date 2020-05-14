@@ -20,7 +20,7 @@
 </head>
 <body>
     <header id="site-header">
-    <a href="https://yaledailynews.com/">
+    <a href="/"> <!-- Links back to landing page -->
       <h1 class="masthead-logo">Yale Daily News</h1>
     </a>
     <nav id="site-navigation">
@@ -33,15 +33,35 @@
   </header>
 
   <header id="mobile-header">
-    <a href="#" class="menu-link fa fa-bars fa-lg"></a>
     <img id="mobile-nameplate" src="https://ydn-wpengine.netdna-ssl.com/wp-content/themes/ydnlabs/css/images/YDN Nameplate Medium.gif">
     <script>
       $('#mobile-nameplate').click(function() {
-        window.location = "https://yaledailynews.com/"
+        window.location = "/" /*Links back to landing page*/
       })
     </script>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <p><div style="border-top: 1px solid #D3D3D3; padding-top: 4vw;" id="bar_nav"><a href="/news">News</a></div></p>
+      <p><div id="bar_nav"><a href="/sports">Sports</a></div></p>
+      <p><div id="bar_nav"><a href="/opinion">Opinion</a></div></p>
+      <p><div id="bar_nav"><a href="/wknd">WKND</a></div><p>
+    </div>
+    <div id="shift">
+      <span style="font-size:8vw;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
   </header>
+
     {{{body}}}
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 </body>
 </html>

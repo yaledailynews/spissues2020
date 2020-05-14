@@ -20,6 +20,7 @@ app.use(
 type Section =
   | 'WKND'
   | 'Opinion'
+  | 'News'
   | 'University'
   | 'City'
   | 'Sports'
@@ -83,8 +84,11 @@ function generateStory(section: Section): Story {
 }
 
 const stories = {
-  WKND: [...Array(5)].map(() => generateStory('WKND')),
+  WKND: [...Array(15)].map(() => generateStory('WKND')),
   opinion: [...Array(5)].map(() => generateStory('Opinion')),
+  News: [...Array(5)].map(() => generateStory('News')),
+  sports: [...Array(5)].map(() => generateStory('sports')),
+
 };
 
 app.use('/public', express.static(join(__dirname, 'public')));
@@ -96,6 +100,18 @@ app.get('/', function (_req, res) {
 
 app.get('/news', function (_req, res) {
   res.render('news', { stories });
+});
+
+app.get('/wknd', function (_req, res) {
+  res.render('wknd', { stories });
+});
+
+app.get('/sports', function (_req, res) {
+  res.render('sports', { stories });
+});
+
+app.get('/opinion', function (_req, res) {
+  res.render('opinion', { stories });
 });
 
 app.get('/other', function (_req, res) {
