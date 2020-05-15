@@ -145,7 +145,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: scroll;
+  overflow-y: auto;
   /*filter: brightness(75%);*/
   background-position: center top;
 }
@@ -159,7 +159,7 @@ body {
 }
 
 .abouttext {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: auto;
     margin: auto;
     margin-top: 2%;
