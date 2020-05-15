@@ -1,5 +1,7 @@
 <style>
-  #headerimg { background-image: url(/public/imgs/WKNDBanner_ZoeBerg.jpg); }
+  #headerimg { background-image: 
+  linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #000000 100%), 
+  url(/public/imgs/WKNDBanner_ZoeBerg.jpg); }
 </style>
 
 <head>
@@ -72,40 +74,43 @@
     </a>
     <a class="apple" href="https://music.apple.com/us/playlist/yale-daily-news-commencement-playlist/pl.u-d2b00PVsp0lNDd" style="display:inline-block;overflow:hidden;background:url(https://tools.applemusic.com/embed/v1/app-icon.svg) no-repeat;"></a>
   </div>
- 
-
-  <!-- BEST OF OVERHEARD -->
-  <img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
   
-  <!-- POEM -->
+  <!-- BEST OF OVERHEARD -->
   <a class="link-wrap" href="https://yaledailynews.com/">
     <article class="story articlecontainer" style="background-image: url({{stories.WKND.0.imageURL}}); ">
         <div class="darkenimage">
           <h1 class="articletext">{{stories.WKND.0.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.0.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.0.authors}}</div>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.0.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- POEM -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.1.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.1.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.1.authors}}</div>
         </div>  
     </article>
   </a>
 
   <!-- SENIOR LETTER 4 -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.1.imageURL}}); ">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.2.imageURL}});">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.1.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.1.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.1.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.2.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.2.authors}}</div>
         </div>  
     </article>
   </a>
 
   <!-- PRECONCEIVED NOTIONS -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.2.imageURL}});">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.3.imageURL}}); ">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.2.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.2.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.2.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.3.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.3.authors}}</div>
         </div>  
     </article>
   </a>
@@ -115,22 +120,20 @@
 
   <!-- SENIOR LETTER 2 -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.3.imageURL}}); ">
+    <article id="restaurant" class="story articlecontainer" style="background-image: url({{stories.WKND.4.imageURL}}); ">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.3.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.3.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.3.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.4.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.4.authors}}</div>
         </div>  
     </article>
   </a>
 
   <!-- A PLAYER'S POINT OF VIEW -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.4.imageURL}}); ">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.5.imageURL}}); ">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.4.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.4.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.4.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.5.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.5.authors}}</div>
         </div>  
     </article>
   </a>
@@ -140,22 +143,20 @@
 
   <!-- LESSON LEARNED -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.5.imageURL}}); ">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.6.imageURL}}); ">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.5.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.5.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.5.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.6.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.6.authors}}</div>
         </div>  
     </article>
   </a>
 
   <!-- YALE LOVE LETTER 5 -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.6.imageURL}}); ">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.7.imageURL}}); ">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.6.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.6.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.6.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.7.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.7.authors}}</div>
         </div>  
     </article>
   </a>
@@ -165,41 +166,25 @@
 
   <!-- QUINTESSENTIAL YALE STORY -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.7.imageURL}}); ">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.8.imageURL}}); ">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.7.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.7.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.7.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.8.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.8.authors}}</div>
         </div>  
     </article>
   </a>
 
   <!-- NOSTALGIA FOR YALE -->
   <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.8.imageURL}}); ">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.9.imageURL}}); ">
         <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.8.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.8.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.8.authors}}</div>
+          <h1 class="articletext">{{stories.WKND.9.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.9.authors}}</div>
         </div>  
     </article>
   </a>
 
   <!-- YALE 2020 RERUN -->
-  <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.9.imageURL}}); ">
-        <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.9.title}}</h1>
-          <div class="articleblurb">{{stories.WKND.9.blurb}}</div>
-          <div class="articleauthor">By {{stories.WKND.9.authors}}</div>
-        </div>  
-    </article>
-</a>
-
-  <!-- 2020 FAVS (PIE CHARTS) -->
-  <img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
-
-  <!-- YALE LOVE LETTER 2 (TD MUSIC ROOM) -->
   <a class="link-wrap" href="https://yaledailynews.com/">
     <article class="story articlecontainer" style="background-image: url({{stories.WKND.10.imageURL}}); ">
         <div class="darkenimage">
@@ -210,7 +195,7 @@
     </article>
   </a>
 
-<!-- DEAR PAULI MURRAY DINING HALL -->
+<!-- 2020 FAVES -->
 <a class="link-wrap" href="https://yaledailynews.com/">
   <article class="story articlecontainer" style="background-image: url({{stories.WKND.11.imageURL}}); ">
       <div class="darkenimage">
@@ -221,38 +206,55 @@
   </article>
 </a>
 
+<!-- YALE LOVE LETTER 2 (TD MUSIC ROOM) -->
+<a class="link-wrap" href="https://yaledailynews.com/">
+  <article class="story articlecontainer" style="background-image: url({{stories.WKND.12.imageURL}}); ">
+      <div class="darkenimage">
+        <h1 class="articletext">{{stories.WKND.12.title}}</h1>
+        <div id="author_op" class="articleauthor">By {{stories.WKND.12.authors}}</div>
+      </div>  
+  </article>
+</a>
+
+<!-- DEAR PAULI MURRAY DINING HALL -->
+<a class="link-wrap" href="https://yaledailynews.com/">
+  <article class="story articlecontainer" style="background-image: url({{stories.WKND.13.imageURL}}); ">
+      <div class="darkenimage">
+        <h1 class="articletext">{{stories.WKND.13.title}}</h1>
+        <div id="author_op" class="articleauthor">By {{stories.WKND.13.authors}}</div>
+      </div>  
+  </article>
+</a>
+
 <!-- WHAT SONG ARE YOU? QUIZ -->
 <img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
 
 <!-- YALE LOVE LETTER 3 -->
 <a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.12.imageURL}}); ">
+  <article class="story articlecontainer" style="background-image: url({{stories.WKND.14.imageURL}});">
       <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.12.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.12.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.12.authors}}</div>
+        <h1 class="articletext">{{stories.WKND.14.title}}</h1>
+        <div id="author_op" class="articleauthor">By {{stories.WKND.14.authors}}</div>
       </div>  
   </article>
 </a>
 
 <!-- LOVE, HAPPINESS, AND THE BASS LIBRARY -->
 <a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.13.imageURL}}); ">
+  <article class="story articlecontainer" style="background-image: url({{stories.WKND.15.imageURL}});">
       <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.13.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.13.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.13.authors}}</div>
+        <h1 class="articletext">{{stories.WKND.15.title}}</h1>
+        <div id="author_op" class="articleauthor">By {{stories.WKND.15.authors}}</div>
       </div>  
   </article>
 </a>
 
 <!-- JE DINING HALL -->
 <a class="link-wrap" href="https://yaledailynews.com/">
-  <article class="story articlecontainer" style="background-image: url({{stories.WKND.14.imageURL}}); margin-bottom:3%;">
+  <article class="story articlecontainer" style="background-image: url({{stories.WKND.16.imageURL}}); margin-bottom:3%;">
       <div class="darkenimage">
-        <h1 class="articletext">{{stories.WKND.14.title}}</h1>
-        <div class="articleblurb">{{stories.WKND.14.blurb}}</div>
-        <div class="articleauthor">By {{stories.WKND.14.authors}}</div>
+        <h1 class="articletext">{{stories.WKND.16.title}}</h1>
+        <div id="author_op" class="articleauthor">By {{stories.WKND.16.authors}}</div>
       </div>  
   </article>
 </a>
