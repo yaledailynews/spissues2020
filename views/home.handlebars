@@ -8,29 +8,40 @@
     if (Math.abs(scrollPage - forPage) <= 1) {
       zIndex = 2;
     }
+    let height = "100%";
+    let width = "80%";
     // We want our opacity to be exactly 1 in the range
     // [forPage - 0.25, forPage + 0.25], and then transition to 0 by the time we
     // get to forPage - 0.75 or forPage + 0.75.
+    //we want height to be 150% in the range [forPage - 0.1, forPage + 0.1]
     let opacity = 0;
+
     if (Math.abs(scrollPage - forPage) <= 0.25) {
+      height = (150 - (Math.abs(scrollPage - forPage) - 0.1) * 20) + "%";
+      if (Math.abs(scrollPage - forPage) <= 0.1) {
+       height = "150%";
+      }
       opacity = 1;
-    } else if (Math.abs(scrollPage - forPage) <= 0.75) {
-      opacity = 1 - (Math.abs(scrollPage - forPage) - 0.25) * 2;
+    } 
+    else if (Math.abs(scrollPage - forPage) <= 0.9) {
+      console.log("calculating");
+       height = (150 - (Math.abs(scrollPage - forPage) - 0.1) * 20) + "%";
+       if (Math.abs(scrollPage - forPage) <= 0.75) {
+         opacity = 1 - (Math.abs(scrollPage - forPage) - 0.25) * 2;
+       }
     }
     return {
+      height: height,
       zIndex: zIndex,
       opacity: opacity
     };
   }
   $(document).ready(function () {
-    $("#site-header").css({
-      "z-index": "3"
-    });
-    $(".link").hover(
+    $(".sectionTitle").hover(
       function () {
-        $(this).animate({ width: "+=200", height: "25vh" }, 400, 'swing');},
+        $(this).animate({ width: "+=200"}, 400, 'swing');},
       function () {
-        $(this).animate({ width: "-=200", height: "25vh" }, 400, 'swing');
+        $(this).animate({ width: "-=200"}, 400, 'swing');
       });
     $(window).on('scroll', function () {
       let height = $(this).scrollTop();
@@ -39,32 +50,36 @@
       // Compute news image CSS styles
       let newsCSS = computePageCSS(1, scrollPage);
       $("#newsImg").css({
-          "width": (100 + height / 50) + "%",
-          "height": (100 + height / 50) + "%",
+          "width": newsCSS.width,
+          "left" : "6vw",
+          "height": newsCSS.height,
           "z-index": newsCSS.zIndex,
           "opacity": newsCSS.opacity
       });
       // Compute sports image CSS styles
       let sportsCSS = computePageCSS(2, scrollPage);
       $("#sportsImg").css({
-          "width": (100 + height / 50) + "%",
-          "height": (100 + height / 50) + "%",
+          "width": newsCSS.width,
+          "left" : "10vw",
+          "height": sportsCSS.height,
           "z-index": sportsCSS.zIndex,
           "opacity": sportsCSS.opacity
       });
       // Compute opinion image CSS styles
       let opinionCSS = computePageCSS(3, scrollPage);
       $("#opinionImg").css({
-          "width": (100 + height / 50) + "%",
-          "height": (100 + height / 50) + "%",
+          "width": newsCSS.width,
+          "right" : "10vw",
+          "height": opinionCSS.height,
           "z-index": opinionCSS.zIndex,
           "opacity": opinionCSS.opacity
       });
       // Compute weekend image CSS styles
       let weekendCSS = computePageCSS(4, scrollPage);
       $("#wkndImg").css({
-          "width": (100 + height / 50) + "%",
-          "height": (100 + height / 50) + "%",
+          "width": "80%",
+          "right" : "-10vw",
+          "height": weekendCSS.height,
           "z-index": weekendCSS.zIndex,
           "opacity": weekendCSS.opacity
       });        
@@ -79,16 +94,25 @@
     margin: 0;
     font-family: ltc-bodoni-175, sans-serif;
   }
+  body {
+    background-color: #000000;
+  }
 
   * {
     box-sizing: border-box;
   }
+  .mobile {
+    display: none; 
+  }
+  #site-header{
+    z-index: 3;
+  }
  .title {
     color: white;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-    font-size: 12vw;
+    font-size: 10.5vw;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bolder;
     text-transform: none;
     position: absolute;/* Stay fixed */
     top: 35%;
@@ -100,9 +124,9 @@
   }
   .subtitle {
     color: rgba(255, 255, 255, 1);
-    font-size: 6vw;
+    font-size: 5.5vw;
     font-style: italic;
-    font-weight: 400;
+    font-weight: bold;
     text-transform: none;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     top: 65%;
@@ -117,9 +141,9 @@
     padding-top: 5%;
   }
   .box {
-    margin: 40vh 0;
+    margin: 60vh 0;
   }
-  .link {
+  /* .link {
     text-align: center;
     color: white;
     font-weight: bold;
@@ -129,15 +153,37 @@
     margin: 0 auto;
     height: 23vh;
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
+    /* Fallback color 
+    background-color: rgba(0, 0, 0, 0.4);*/
     /* Black w/opacity/see-through */
-    border: 1.2vh solid #f1f1f1;
+    /*border: 1.2vh solid #f1f1f1;
     z-index: 10;
     padding-left: 2vh;
-    padding-right: 2vh;
-    
-  
+    padding-right: 2vh; 
+  }*/
+  .sectionTitle {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    font-size: 10em;
+    text-decoration: none; 
+    border: 1.2vh solid #f1f1f1;
+    position: relative; /* Stay fixed */
+ 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 2vh;
+    text-align: center;
+    overflow-x:visible;
+
+  }
+  .link {
+    text-decoration: none;
+    color: white; 
+    overflow-x: auto;
   }
   .headings {
     display: flex;
@@ -157,8 +203,8 @@
   #newsImg {
     position: sticky;
     z-index: 2;
-    top: 100vh;
-    width: 200vw;
+
+    width: 80%;
     height: 150vh;
     object-fit: cover;
   }
@@ -167,7 +213,7 @@
     z-index: 1;
     top: 100vh;
     opacity: 0;
-    width: 200vw;
+    width: 80%;
     height: 150vh;
     object-fit: cover;
   }
@@ -176,7 +222,7 @@
     z-index: 1;
     top: 100vh;
     opacity: 0;
-    width: 200vw;
+    width: 80%;
     height: 150vh;
     object-fit: cover;
   }
@@ -185,7 +231,7 @@
     z-index: 1;
     top: 100vh;
     opacity: 0;
-    width:200vw; 
+    width: 80%; 
     height: 150vh;
     object-fit: cover;
   }
@@ -200,13 +246,26 @@
     background-size: cover;
     z-index: 9;
     background-image:
-      linear-gradient(to bottom, rgba(185, 185, 250, 0.815), rgba(255, 255, 255, 0)),
+      linear-gradient(to bottom, rgba(179, 179, 206, 0.384), rgba(255, 255, 255, 0)),
       url('public/imgs/cropped.jpg');
   }
   @media(max-width:1100px) {
+    body{
+      background-color: #000000;
+    }
     .headImg {
       background-attachment: scroll;
       overflow-y: scroll;
+    }
+    .title {
+      font-weight: bolder;
+      font-size: 12.5vw;
+      top: 40%;
+    }
+    .subtitle{
+      top: 70%;
+      font-weight: bolder;
+      font-size: 7vw; 
     }
     .desktop{
       display: none; 
@@ -266,31 +325,31 @@
     #mobileNews{
       background-position: center;
       background-image:
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000000c0 100%),
+        linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000c0 100%),
 
         url(public/imgs/NewsLanding_LukasFlippo.jpg);
     }
     #mobileSports{
       background-position: 63% 60%; 
       background-image: 
-      linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000000 100%),
-      linear-gradient(to top, rgba(255, 255, 255, 0) 60%, #000000c0 100%),
+      linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
+      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000c0 100%),
       url(public/imgs/SportsLanding_LukasFlippo.jpg);
     }
     #mobileOpinion{
       background-position: 55% 70%; 
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000000 100%),
-      linear-gradient(to top, rgba(255, 255, 255, 0) 60%, #000000e5 100%),
+      background-image: linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
+      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000e5 100%),
       url(public/imgs/OpinionLanding_DavidZheng.jpg);
     }
     #mobileWknd{
       background-position: 55% 70%;
       background-image:
-        linear-gradient(to top, rgba(255, 255, 255, 0) 70%, #000000c0 100%),
+        linear-gradient(to bottom, rgba(12, 9, 9, 0) 80%, #000000 100%),
+        linear-gradient(to top, rgba(15, 14, 14, 0.096) 70%, #000000c0 100%),
         url(public/imgs/WKNDLanding_ZoeBerg.JPG);
     }
     .mobileBg{
-       background-size: contain;
        background-size: cover;
        height: 100vh;
        width: 100vw; 
@@ -301,36 +360,45 @@
       background-repeat: no-repeat;
     }
    
-  .bg-text {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    font-size: 11vh;
-    text-decoration: none; 
-    border: 1.2vh solid #f1f1f1;
-    position: absolute; /* Stay fixed */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 80vw;
-    padding: 20px;
-    text-align: center;
-    overflow-x: hidden;
-    text-align: center;
+    .bg-text {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      font-size: 11vh;
+      text-decoration: none; 
+      border: 1.2vh solid #f1f1f1;
+      position: absolute; /* Stay fixed */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      padding: 2vh;
+      margin-top:3%;
+      text-align: center;
+      overflow-x: visible;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: white; 
+      overflow-x: auto;
+    }
   }
-  a {
-    text-decoration: none;
-    color: white; 
-    overflow-x: auto;
-  }
- 
-
-    
-
-  }
-}
+  @media(min-width:750px) and (max-width:1000px) {
+      #shift {
+        margin-top: -6%;
+        width: 5vw;
+    }
+  } 
+  @media(min-width:750px) and (max-width:1100px) {
+    #site-header {
+      display: block;
+    }
+     #mobile-header {
+      display: none;
+    }
+  } 
 </style>
 
 
@@ -353,19 +421,28 @@
     <div class="bg">
       <img id="wkndImg" src="public/imgs/WKNDLanding_ZoeBerg.JPG"></img>
     </div>
-    <div class="headings">
-      <div class="box">
-        <a class="link" href='/news'>News</a>
-      </div>
-      <div class="box">
-        <a class="link" href='/sports'>Sports</a>
-      </div>
-      <div class="box">
-        <a class="link" href='/opinion'>Opinion</a>
-      </div>
-      <div class="box">
-        <a class="link" href='/wknd'>WKND</a>
-      </div>
+   
+      <div class="box"></div>
+        <div class="sectionTitle" style="width: 3.2em">
+          <a class="link" href='/news'>News</a>
+        </div>
+      
+      <div class="box"></div>
+        <div class="sectionTitle" style="width: 3.6em; padding-bottom: .2em;">
+          <a class="link" href='/sports'>Sports</a>
+        </div>
+      <div class="box"></div>
+        <div class="sectionTitle" style="width: 4em; padding-bottom: .2em;">
+          <a class="link" href='/opinion'>Opinion</a>
+        </div>
+      
+      <div class="box"></div>
+        <div class="sectionTitle" style="width: 4em; margin-bottom: 60vh;">
+          <a class="link" href='/wknd'>WKND</a>
+        </div>
+      
+    
+      
     </div>
   </div>
   <div class= "mobile">
