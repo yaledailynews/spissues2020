@@ -79,9 +79,7 @@
     margin: 0;
     font-family: ltc-bodoni-175, sans-serif;
   }
-  body {
-    background-attachment: scroll;
-  }
+
   * {
     box-sizing: border-box;
   }
@@ -160,7 +158,7 @@
     position: sticky;
     z-index: 2;
     top: 100vh;
-    width: 100vw;
+    width: 200vw;
     height: 150vh;
     object-fit: cover;
   }
@@ -169,7 +167,7 @@
     z-index: 1;
     top: 100vh;
     opacity: 0;
-    width: 50vw;
+    width: 200vw;
     height: 150vh;
     object-fit: cover;
   }
@@ -187,7 +185,7 @@
     z-index: 1;
     top: 100vh;
     opacity: 0;
-    width:100vw; 
+    width:200vw; 
     height: 150vh;
     object-fit: cover;
   }
@@ -205,17 +203,136 @@
       linear-gradient(to bottom, rgba(185, 185, 250, 0.815), rgba(255, 255, 255, 0)),
       url('public/imgs/cropped.jpg');
   }
- .option1{
-  position: sticky; 
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 100vh; 
-  height: 100vh;
-  width: 100vw; 
-  background-image: url(public/imgs/NewsLanding_LukasFlippo.jpg);
- }
+  @media(max-width:1100px) {
+    .headImg {
+      background-attachment: scroll;
+      overflow-y: scroll;
+    }
+    .desktop{
+      display: none; 
+    }
+    #site-header{
+      display: none;
+    }
+    #mobile-header{
+      display: block;
+      margin: 0 auto; 
+      z-index: 10; 
+    }
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 0 0 4vw 4vw;
+      text-decoration: none;
+      font-size: 8vw;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      line-height: 1.2;
+    }
+    #bar_nav {
+        border-bottom: 1px solid #D3D3D3;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    } 
+    #shift {
+        margin-top: -9%;
+        width: 5vw;
+    }
+    .mobile {
+      display: block; 
+    }
+    #mobileNews{
+      background-position: center;
+      background-image:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000000c0 100%),
+
+        url(public/imgs/NewsLanding_LukasFlippo.jpg);
+    }
+    #mobileSports{
+      background-position: 63% 60%; 
+      background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000000 100%),
+      linear-gradient(to top, rgba(255, 255, 255, 0) 60%, #000000c0 100%),
+      url(public/imgs/SportsLanding_LukasFlippo.jpg);
+    }
+    #mobileOpinion{
+      background-position: 55% 70%; 
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #000000 100%),
+      linear-gradient(to top, rgba(255, 255, 255, 0) 60%, #000000e5 100%),
+      url(public/imgs/OpinionLanding_DavidZheng.jpg);
+    }
+    #mobileWknd{
+      background-position: 55% 70%;
+      background-image:
+        linear-gradient(to top, rgba(255, 255, 255, 0) 70%, #000000c0 100%),
+        url(public/imgs/WKNDLanding_ZoeBerg.JPG);
+    }
+    .mobileBg{
+       background-size: contain;
+       background-size: cover;
+       height: 100vh;
+       width: 100vw; 
+       background-attachment: scroll;
+       background-position: center;
+       overflow-y: auto; 
+     
+      background-repeat: no-repeat;
+    }
+   
+  .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    font-size: 11vh;
+    text-decoration: none; 
+    border: 1.2vh solid #f1f1f1;
+    position: absolute; /* Stay fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80vw;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: white; 
+    overflow-x: auto;
+  }
+ 
+
+    
+
+  }
+}
 </style>
+
 
 <body>
 
@@ -223,33 +340,58 @@
     <div class="title">Commencement 2020</div>
     <div class="subtitle">4 Years in Review</div>
   </div>
-    <!--<div class="option1"></div>-->
-
-
-  <div class="bg" id="one">
-    <img id="newsImg" src="public/imgs/NewsLanding_LukasFlippo.jpg"></img>
-  </div>
-  <div class="bg" id="two">
-    <img id="sportsImg" src="public/imgs/SportsLanding_LukasFlippo.jpg"></img>
-  </div>
-  <div class="bg">
-    <img id="opinionImg" src="public/imgs/OpinionLanding_DavidZheng.jpg"></img>
-  </div>
-  <div class="bg">
-    <img id="wkndImg" src="public/imgs/WKNDLanding_ZoeBerg.JPG"></img>
-  </div>
-  <div class="headings">
-    <div class="box">
-      <a class="link" href='/news'>News</a>
+  <div class= "desktop">
+    <div class="bg" id="one">
+      <img id="newsImg" src="public/imgs/NewsLanding_LukasFlippo.jpg"></img>
     </div>
-    <div class="box">
-      <a class="link" href='/sports'>Sports</a>
+    <div class="bg" id="two">
+      <img id="sportsImg" src="public/imgs/SportsLanding_LukasFlippo.jpg"></img>
     </div>
-    <div class="box">
-      <a class="link" href='/opinion'>Opinion</a>
+    <div class="bg">
+      <img id="opinionImg" src="public/imgs/OpinionLanding_DavidZheng.jpg"></img>
     </div>
-    <div class="box">
-      <a class="link" href='/wknd'>WKND</a>
+    <div class="bg">
+      <img id="wkndImg" src="public/imgs/WKNDLanding_ZoeBerg.JPG"></img>
+    </div>
+    <div class="headings">
+      <div class="box">
+        <a class="link" href='/news'>News</a>
+      </div>
+      <div class="box">
+        <a class="link" href='/sports'>Sports</a>
+      </div>
+      <div class="box">
+        <a class="link" href='/opinion'>Opinion</a>
+      </div>
+      <div class="box">
+        <a class="link" href='/wknd'>WKND</a>
+      </div>
+    </div>
+  </div>
+  <div class= "mobile">
+    <div class="mobileBg" id="mobileNews">
+       <div class="container" id="container1"></div>
+      <div class="bg-text" id="imgformat1">
+        <a href='/news'>News</a>
+      </div>
+    </div>
+    <div class="mobileBg" id="mobileSports">
+      <div class="container" id="container1"></div>
+      <div class="bg-text" id="imgformat1">
+        <a href='/sports'>Sports</a>
+      </div>
+    </div>
+    <div class="mobileBg" id="mobileOpinion">
+      <div class="container" id="container2"></div>
+      <div class="bg-text" id="imgformat2">
+        <a href='/opinion'>Opinion</a>
+      </div>
+    </div>
+    <div class="mobileBg" id="mobileWknd">
+      <div class="container" id="container3"></div>
+      <div class="bg-text" id="imgformat3">
+        <a href='/wknd'>WKND</a>
+      </div>
     </div>
   </div>
 </body>
