@@ -47,8 +47,8 @@
       // Compute news image CSS styles
       let newsCSS = computePageCSS(1, scrollPage);
       $("#newsImg").css({
-          "width": (100 + height / 20) + "%",
-          "height": (100 + height / 20) + "%",
+          "width": (100 + height / 50) + "%",
+          "height": (100 + height / 50) + "%",
           "z-index": newsCSS.zIndex,
           "opacity": newsCSS.opacity
       });
@@ -56,7 +56,8 @@
       // Compute sports image CSS styles
       let sportsCSS = computePageCSS(2, scrollPage);
       $("#sportsImg").css({
-          "width": (100 + height / 20) + "%",
+          "width": (100 + height / 50) + "%",
+          "height": (100 + height / 50) + "%",
           "z-index": sportsCSS.zIndex,
           "opacity": sportsCSS.opacity
       });
@@ -64,7 +65,8 @@
       // Compute opinion image CSS styles
       let opinionCSS = computePageCSS(3, scrollPage);
       $("#opinionImg").css({
-          "width": (100 + height / 20) + "%",
+          "width": (100 + height / 50) + "%",
+          "height": (100 + height / 50) + "%",
           "z-index": opinionCSS.zIndex,
           "opacity": opinionCSS.opacity
       });
@@ -72,87 +74,11 @@
       // Compute weekend image CSS styles
       let weekendCSS = computePageCSS(4, scrollPage);
       $("#wkndImg").css({
-          "width": (100 + height / 20) + "%",
+          "width": (100 + height / 50) + "%",
+          "height": (100 + height / 50) + "%",
           "z-index": weekendCSS.zIndex,
           "opacity": weekendCSS.opacity
-      });
-
-      /*if (height < 1200) {
-        console.log("testing");
-        $("#newsImg").css({
-          width: (100 + height / 20) + "%",
-          "z-index": "2",
-          "opacity": "1",
-        });
-        $("#wknd").css({
-          width: (100 + height / 20) + "%",
-          "z-index": "1",
-          "opacity": "0",
-        });
-      }
-      if (height > 1200) { 
-        $("#newsImg").css({
-          "z-index": "1",
-          "transition": "opacity 2s ease-in-out",
-          opacity: function () {
-            let elementHeight = $(this).height(),
-              opacity = ((elementHeight - height / 1.3) / elementHeight);
-            return opacity;
-          }
-        });
-        $("#sportsImg").css({
-          width: (100 + height / 20) + "%",
-          "z-index": "2",
-          "transition": "opacity 2s ease-in-out",
-          opacity: function () {
-            let elementHeight = $(this).height(),
-              opacity = ((1 - (elementHeight - height) / height) * 0.8) + 0.2;
-            return opacity;
-          }
-        });
-      }
-
-      if (height > 2100) { 
-        $("#sportsImg").css({
-          "z-index": "1",
-          "transition": "opacity 2s ease-in-out",
-          opacity: function () {
-            let elementHeight = $(this).height(),
-              opacity = ((elementHeight - height / 1.3) / elementHeight);
-            return opacity;
-          }
-        });
-        $("#opinionImg").css({
-          width: (100 + height / 20) + "%",
-          "z-index": "2",
-          "transition": "opacity 1s ease-in-out",
-          opacity: function () {
-            let elementHeight = $(this).height(),
-              opacity = ((1 - (elementHeight - height) / height) * 0.8) + 0.2;
-            return opacity;
-          }
-        });
-      }
-      if (height > 3100) {
-        $("#opinionImg").css({
-          "z-index": "1",
-          "transition": "opacity 2s ease-in-out",
-          opacity: function () {
-            let elementHeight = $(this).height(),
-              opacity = ((elementHeight - height / 3) / elementHeight);
-            return opacity;
-          }
-          });
-        $("#wkndImg").css({
-          width: (100 + height / 20) + "%",
-          "transition": "opacity 1s ease-in-out",
-          "z-index": "2",
-          opacity: function () {
-            let elementHeight = $(this).height(),
-              opacity = ((1 - (elementHeight - height) / height) * 0.5) + 0.2;
-            return opacity;
-          }
-        });*/   
+      });        
     });
 }); 
 </script>
@@ -225,41 +151,22 @@
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/opacity/see-through */
     border: 1.2vh solid #f1f1f1;
-    line-height: 20vh;
+
     z-index: 10;
     padding-left: 2vh;
     padding-right: 2vh;
+    
+  
   }
-
-  /* Images used 
-  #sportsImg {
-    background-image: url("public/imgs/SportsLanding_LukasFlippo.jpg");
-  }
-
-  #opinionImg {
-    background-image: url("public/imgs/OpinionLanding_DavidZheng.jpg");
-  }
-
-  #wkndImg {
-    background-image: url("public/imgs/WKNDLanding_ZoeBerg.JPG");
-  }
-
-  #newsImg {
-    background-image: url("public/imgs/NewsLanding_LukasFlippo.jpg");
-  }*/
-
 
   .headings {
     display: flex;
     display: flex;
-     
     justify-content: center;
     flex-direction: column;
     align-items: center;
-  }
-
-
-
+  } 
+  
   .bg {
     position: fixed;
     top: -50%;
@@ -272,9 +179,10 @@
     position: sticky;
     z-index: 2;
     top: 100vh;
-    width: 200vw;
+    width: 100vw;
     height: 150vh;
     object-fit: cover;
+
   }
 
   #sportsImg {
@@ -282,11 +190,10 @@
     z-index: 1;
     top: 100vh;
     opacity: 0;
-    width: 200vw;
+    width: 50vw;
     height: 150vh;
     object-fit: cover;
   }
-
 
   #opinionImg {
     position: sticky;
@@ -303,7 +210,7 @@
     z-index: 1;
     top: 100vh;
     opacity: 0;
-    width: 200vw;
+    width:100vw; 
     height: 150vh;
     object-fit: cover;
   }
