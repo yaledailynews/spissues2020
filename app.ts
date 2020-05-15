@@ -84,10 +84,10 @@ function generateStory(section: Section): Story {
 }
 
 const stories = {
-  WKND: [...Array(15)].map(() => generateStory('WKND')),
+  WKND: [...Array(17)].map(() => generateStory('WKND')),
   opinion: [...Array(8)].map(() => generateStory('Opinion')),
   News: [...Array(33)].map(() => generateStory('News')),
-  sports: [...Array(9)].map(() => generateStory('Sports')),
+  sports: [...Array(11)].map(() => generateStory('Sports')),
 };
 
 app.use('/public', express.static(join(__dirname, 'public')));
