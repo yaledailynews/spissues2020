@@ -140,27 +140,10 @@
     position: absolute;
     padding-top: 5%;
   }
+  /* style for boxes that hold section titles*/
   .box {
     margin: 60vh 0;
   }
-  /* .link {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    overflow-y: hidden;
-    overflow-x: auto;
-    font-size: 11.5vw;
-    margin: 0 auto;
-    height: 23vh;
-    background-color: rgb(0, 0, 0);
-    /* Fallback color 
-    background-color: rgba(0, 0, 0, 0.4);*/
-    /* Black w/opacity/see-through */
-    /*border: 1.2vh solid #f1f1f1;
-    z-index: 10;
-    padding-left: 2vh;
-    padding-right: 2vh; 
-  }*/
   .sectionTitle {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -169,8 +152,7 @@
     font-size: 10em;
     text-decoration: none; 
     border: 1.2vh solid #f1f1f1;
-    position: relative; /* Stay fixed */
- 
+    position: relative; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -178,7 +160,6 @@
     padding: 2vh;
     text-align: center;
     overflow-x:visible;
-
   }
   .link {
     text-decoration: none;
@@ -192,8 +173,9 @@
     flex-direction: column;
     align-items: center;
   } 
+  /* end of style for boxes that hold section titles*/
   
-  .bg {
+  .bg {/*container for each of the background images*/
     position: fixed;
     top: -50%;
     left: -50%;
@@ -203,7 +185,6 @@
   #newsImg {
     position: sticky;
     z-index: 2;
-
     width: 80%;
     height: 150vh;
     object-fit: cover;
@@ -237,7 +218,7 @@
   }
   .headImg {
     background-position: center bottom;
-    border-bottom: .4vh solid #f1f1f1;
+    border-bottom: .2vh solid #f1f1f1;
     position: relative;
     width: 100%;
     height: 100%;
@@ -250,14 +231,12 @@
       url('public/imgs/cropped.jpg');
   }
   @media(max-width:1100px) {
-    body{
-      background-color: #000000;
-    }
     .headImg {
       background-attachment: scroll;
       overflow-y: scroll;
     }
     .title {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
       font-weight: bolder;
       font-size: 12.5vw;
       top: 40%;
@@ -278,6 +257,7 @@
       margin: 0 auto; 
       z-index: 10; 
     }
+
     .sidenav {
       height: 100%;
       width: 0;
@@ -301,6 +281,7 @@
       line-height: 1.2;
     }
     #bar_nav {
+        padding-top: 4vw; 
         border-bottom: 1px solid #D3D3D3;
     }
 
@@ -314,8 +295,8 @@
       right: 25px;
       font-size: 36px;
       margin-left: 50px;
-    } 
-    #shift {
+    }
+    #shift { /*shifts the hamburger icon*/
         margin-top: -9%;
         width: 5vw;
     }
@@ -325,21 +306,20 @@
     #mobileNews{
       background-position: center;
       background-image:
-        linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000c0 100%),
-
+        linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000e1 100%),
         url(public/imgs/NewsLanding_LukasFlippo.jpg);
     }
     #mobileSports{
       background-position: 63% 60%; 
       background-image: 
       linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
-      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000c0 100%),
+      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000c7 100%),
       url(public/imgs/SportsLanding_LukasFlippo.jpg);
     }
     #mobileOpinion{
       background-position: 55% 70%; 
       background-image: linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
-      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000e5 100%),
+      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000 100%),
       url(public/imgs/OpinionLanding_DavidZheng.jpg);
     }
     #mobileWknd{
@@ -350,16 +330,14 @@
         url(public/imgs/WKNDLanding_ZoeBerg.JPG);
     }
     .mobileBg{
-       background-size: cover;
-       height: 100vh;
-       width: 100vw; 
-       background-attachment: scroll;
-       background-position: center;
-       overflow-y: auto; 
-     
-      background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw; 
+        background-attachment: scroll;
+        background-position: center;
+        overflow-y: auto; 
+        background-repeat: no-repeat;
     }
-   
     .bg-text {
       background-color: rgb(0,0,0); /* Fallback color */
       background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -379,19 +357,19 @@
       overflow-x: visible;
       text-align: center;
     }
-    a {
+    .mobileLink {
       text-decoration: none;
       color: white; 
       overflow-x: auto;
     }
   }
   @media(min-width:750px) and (max-width:1000px) {
-      #shift {
+      #shift { /*shifts the hamburger icon*/
         margin-top: -6%;
         width: 5vw;
     }
   } 
-  @media(min-width:750px) and (max-width:1100px) {
+  @media(min-width:750px) and (max-width:1100px) { /*we want the mobile header for anything smaller than ipad*/
     #site-header {
       display: block;
     }
@@ -421,12 +399,10 @@
     <div class="bg">
       <img id="wkndImg" src="public/imgs/WKNDLanding_ZoeBerg.JPG"></img>
     </div>
-   
       <div class="box"></div>
         <div class="sectionTitle" style="width: 3.2em">
           <a class="link" href='/news'>News</a>
         </div>
-      
       <div class="box"></div>
         <div class="sectionTitle" style="width: 3.6em; padding-bottom: .2em;">
           <a class="link" href='/sports'>Sports</a>
@@ -435,40 +411,38 @@
         <div class="sectionTitle" style="width: 4em; padding-bottom: .2em;">
           <a class="link" href='/opinion'>Opinion</a>
         </div>
-      
       <div class="box"></div>
         <div class="sectionTitle" style="width: 4em; margin-bottom: 60vh;">
           <a class="link" href='/wknd'>WKND</a>
         </div>
-      
-    
-      
     </div>
   </div>
+
   <div class= "mobile">
     <div class="mobileBg" id="mobileNews">
-       <div class="container" id="container1"></div>
-      <div class="bg-text" id="imgformat1">
-        <a href='/news'>News</a>
+       <div class="container"></div>
+      <div class="bg-text">
+        <a class="mobileLink" href='/news'>News</a>
       </div>
     </div>
     <div class="mobileBg" id="mobileSports">
-      <div class="container" id="container1"></div>
-      <div class="bg-text" id="imgformat1">
-        <a href='/sports'>Sports</a>
+      <div class="container"></div>
+      <div class="bg-text">
+        <a class="mobileLink" href='/sports'>Sports</a>
       </div>
     </div>
     <div class="mobileBg" id="mobileOpinion">
-      <div class="container" id="container2"></div>
-      <div class="bg-text" id="imgformat2">
-        <a href='/opinion'>Opinion</a>
+      <div class="container"></div>
+      <div class="bg-text">
+        <a class="mobileLink" href='/opinion'>Opinion</a>
       </div>
     </div>
     <div class="mobileBg" id="mobileWknd">
-      <div class="container" id="container3"></div>
-      <div class="bg-text" id="imgformat3">
-        <a href='/wknd'>WKND</a>
+      <div class="container"></div>
+      <div class="bg-text">
+        <a class="mobileLink" href='/wknd'>WKND</a>
       </div>
     </div>
+
   </div>
 </body>
