@@ -79,7 +79,7 @@ body {
 .option {
   float: left; 
 }
-.link {
+.navLink {
   text-decoration: none;
   margin-right: 2vw; 
   margin-left: 2vw; 
@@ -90,7 +90,7 @@ body {
   font-size: 2.5vw; 
   height: 9vh;
 }
-.link:hover{
+.navLink:hover{
   background-color: rgba(85, 82, 82);
   color: white;
 }
@@ -516,7 +516,7 @@ a:focus {
     .list{
         height: 6vh;
     } 
-    .link {
+    .navLink{
         height: 6vh;
     }
     #site-header {
