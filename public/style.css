@@ -598,3 +598,51 @@ header#site-header nav#site-navigation #nav-search input:focus {
     padding: 0;
   }
 }
+
+.bottom-foot-wrap {
+  padding-top: 20px;
+}
+
+footer#site-footer {
+  margin-top: 30px;
+  /* background-color: #f6f4f4; */
+  text-align: center;
+  z-index: 5;
+}
+
+footer#site-footer a {
+  text-decoration: none;
+  font-family: "Avenir-Roman", "Helvetica", "Arial";
+  font-size: 11px;
+  color: #aaa;
+  padding: 20px 0px;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin: 0px 10px 0px 10px;
+  transition: all 0.25s ease;
+}
+
+footer#site-footer a:hover {
+  color: #191919;
+  transition: all 0.25s ease;
+}
+
+@media (max-width: 880px) {
+  footer#site-footer {
+    margin-top: 20px;
+  }
+  footer#site-footer a.copy {
+    display: block;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  footer#site-footer {
+    margin-top: 20px;
+  }
+  footer#site-footer a.copy {
+    display: block;
+    padding: 0;
+  }
+}
