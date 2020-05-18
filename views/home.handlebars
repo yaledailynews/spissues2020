@@ -68,7 +68,7 @@
       // Compute opinion image CSS styles
       let opinionCSS = computePageCSS(3, scrollPage);
       $("#opinionImg").css({
-          "width": newsCSS.width,
+          "width": opinionCSS.width,
           "right" : "10vw",
           "height": opinionCSS.height,
           "z-index": opinionCSS.zIndex,
@@ -113,6 +113,7 @@
     font-size: 10.5vw;
     font-style: normal;
     font-weight: bolder;
+    white-space: nowrap;
     text-transform: none;
     position: absolute;/* Stay fixed */
     top: 35%;
@@ -226,9 +227,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 9;
+    filter: grayscale(0.90);
     background-image:
       linear-gradient(to bottom, rgba(179, 179, 206, 0.384), rgba(255, 255, 255, 0)),
-      url('public/imgs/cropped.jpg');
+      url('public/imgs/Main_ZoeBerg.JPG');
+  }
+  footer#site-footer a {
+    color: whitesmoke;
   }
   @media(max-width:1100px) {
     .headImg {
@@ -257,7 +262,6 @@
       margin: 0 auto; 
       z-index: 10; 
     }
-
     .sidenav {
       height: 100%;
       width: 0;
@@ -307,27 +311,27 @@
       background-position: center;
       background-image:
         linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000e1 100%),
-        url(public/imgs/NewsLanding_LukasFlippo.jpg);
+        url(public/imgs/NewsLanding_SanyaNijhawan.JPG);
     }
     #mobileSports{
       background-position: 63% 60%; 
       background-image: 
       linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
-      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000c7 100%),
-      url(public/imgs/SportsLanding_LukasFlippo.jpg);
+      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000 100%),
+      url(public/imgs/LandingPage_LukasFlippo.jpg);
     }
     #mobileOpinion{
       background-position: 55% 70%; 
       background-image: linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
       linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000 100%),
-      url(public/imgs/OpinionLanding_DavidZheng.jpg);
+      url(public/imgs/OpinionLanding_SydneyHolmes.jpeg);
     }
     #mobileWknd{
       background-position: 55% 70%;
       background-image:
         linear-gradient(to bottom, rgba(12, 9, 9, 0) 80%, #000000 100%),
-        linear-gradient(to top, rgba(15, 14, 14, 0.096) 70%, #000000c0 100%),
-        url(public/imgs/WKNDLanding_ZoeBerg.JPG);
+        linear-gradient(to top, rgba(15, 14, 14, 0.096) 70%, #000000 100%),
+        url(public/imgs/WKNDLanding_MarisaPeryer.JPG);
     }
     .mobileBg{
         background-size: cover;
@@ -383,21 +387,21 @@
 <body>
 
   <div class="headImg">
-    <div class="title">Commencement 2020</div>
-    <div class="subtitle">4 Years in Review</div>
+    <div class="title">First-Year Issue</div>
+    <div class="subtitle">Yale Daily News Stories</div>
   </div>
   <div class= "desktop">
     <div class="bg" id="one">
-      <img id="newsImg" src="public/imgs/NewsLanding_LukasFlippo.jpg"></img>
+      <img id="newsImg" src="public/imgs/NewsLanding_SanyaNijhawan.JPG"></img>
     </div>
     <div class="bg" id="two">
-      <img id="sportsImg" src="public/imgs/SportsLanding_LukasFlippo.jpg"></img>
+      <img id="sportsImg" src="public/imgs/LandingPage_LukasFlippo.jpg"></img>
     </div>
     <div class="bg">
-      <img id="opinionImg" src="public/imgs/OpinionLanding_DavidZheng.jpg"></img>
+      <img id="opinionImg" src="public/imgs/OpinionLanding_SydneyHolmes.jpeg"></img>
     </div>
     <div class="bg">
-      <img id="wkndImg" src="public/imgs/WKNDLanding_ZoeBerg.JPG"></img>
+      <img id="wkndImg" src="public/imgs/WKNDLanding_MarisaPeryer.JPG"></img>
     </div>
       <div class="box"></div>
         <div class="sectionTitle" style="width: 3.2em">

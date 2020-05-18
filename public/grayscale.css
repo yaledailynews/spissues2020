@@ -164,21 +164,7 @@ body {
     background-color: #219ab3;
 }
 
-#spotify {
-  display: block;
-  margin: 0 auto;
-}
-.youtube-icon {
-    font-size:11vh;
-    margin-left: 45%;
-    top: -3vh; 
-}
-.apple {
-    height: 5vw; 
-    width: 5vw; 
-    top: -2.7vh; 
-    left: 2vh;
-}
+
 .extra {
   width: 80vw;
   margin: auto;
@@ -186,20 +172,7 @@ body {
   overflow-y: auto;
   margin-bottom: 3%;
 }
-.seniorquotes {
-    width: 80vw;
-    margin: auto;
-    display: block;
-    overflow-y: auto;
-    margin-bottom: 3%;
-}
-.alignmentchart {
-    width: 50vw;
-    margin: auto;
-    display: block;
-    overflow-y: auto;
-    margin-bottom: 3%;
-}
+
 .center {
   position: absolute; /* Stay fixed */
   left: 50%;
