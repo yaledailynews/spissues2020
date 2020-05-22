@@ -1,6 +1,6 @@
 <style>
   #headerimg { 
-    background-position: 54% 50%; /*getting the book in the image to be center*/
+    background-position: 54% 50%; 
     background-image: 
     linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #000000 100%), 
     url(/public/imgs/WKNDHeader_DavidZheng.jpg);
@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content=" Yaa Owusu '22 and Julia Burgiel '22">
+    
     <meta name="description" content="Spissues 2020, design based on 2019 Year in Review and 2014 HY site">
 
     <title>WKND</title>
@@ -20,7 +20,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="public/grayscale.css" />
-
+    <link rel="stylesheet" href="https://use.typekit.net/bho6xci.css">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="shortcut icon" type="image/png" href="./img/favicon.gif"/>
@@ -60,7 +60,7 @@
     <div id="about"></div>
   </div>
   <!-- About Section -->
-  <div class="abouttext" style="text-align: center;">
+  <div class="abouttext">
     Because Bulldog Days didn’t happen, many of you have yet to step foot on campus. WKND writers have compiled their humor, advice, and reflection to guide you through your first few months on Yale’s campus. 
   </div> 
   <!-- The first day of your Bright College Years -->
@@ -104,7 +104,7 @@
   </a>
 
   <!-- GRAPHIC: WHICH NEW HAVEN RESTAURANT-->
-  <img src="/public/imgs/SportsLanding_LukasFlippo.jpg" class="extra">
+  <img src="/public/imgs/wknd/restaurant flowchart.png" class="extra">
 
   <!-- Fun weekend acitvities that don't involve drinking -->
   <a class="link-wrap" href="https://yaledailynews.com/">
@@ -157,9 +157,757 @@
   </a>
 
   <!-- INTERACTIVE GRAPHIC: FAVORITE STUDY SPACES -->
-  <img src="/public/imgs/WKND/WKND3.jpg" >
+  <div class="desktopMap">
+    <div class="leftBox">
+      <div>Want to know what your favorite study spot says about you?</div>
+      <div class="popUp1"> 
+        <span id="startMsg">Click the map to find out!</span>
+        <span id="dsktpTitle"></span>
+        <span id="dsktpMsg"></span>
+      </div>
+    </div>
+    <div class="mapWrapper">
+      <img class="map" src="/public/imgs/wknd/map.PNG" />
 
-  <!-- Yale Heal Cannot Heal Homesickness-->
+      <a class="glcCmpnt" id="glc1"></a>
+      <a class="glcCmpnt" id="glc2"></a>
+      <a class="glcCmpnt" id="glcBubble"></a>
+
+      <a class="kroonCmpnt" id="kroon"></a>
+      <a class="kroonCmpnt" id="kroonBubble"></a>
+
+      <a class="roomCmpnt" id="room"></a>
+      <a class="roomCmpnt"id="roomBubble"></a>
+      <a id="roomOffset"></a>
+      <a class="lawCmpnt" id="law1"></a>
+      <a class="lawCmpnt" id="law2"></a>
+      <a class="lawCmpnt" id="lawBubble"></a>
+
+      <a class="starrCmpnt" id="starrTop"></a>
+      <a class="starrCmpnt" id="starrMid1"></a>
+      <a class="starrCmpnt" id="starrMid2"></a>
+      <a class="starrCmpnt" id="starrBubble"></a>
+      <a class="starrCmpnt" id="starrBase"></a>
+      <a class="starrCmpnt" id="starrBubble"></a>
+
+      <a class="bassCmpnt" id="bassTop"></a>
+      <a class="bassCmpnt" id="bassMid1"></a>
+      <a class="bassCmpnt" id="bassMid2"></a>
+      <a class="bassCmpnt" id="bassBase"></a>
+      <a class="bassCmpnt" id="bassBubble"></a>
+
+      <a class="phelpsCmpnt" id="phelps"></a>
+      <a class="phelpsCmpnt" id="phelpsBubble"></a>
+
+      <a class="haasCmpnt" id="haasTop"></a>
+      <a class="haasCmpnt" id="haasBase"></a>
+      <a class="haasCmpnt" id="haasBubble"></a>
+    </div>
+  </div>
+  <div class="mobileMap">
+    <div class="mapWrapper">
+      <img class="map" src="/public/imgs/wknd/mobileMap.PNG" />
+
+      <a class="glcCmpnt" id="glc1"></a>
+      <a class="glcCmpnt" id="glc2"></a>
+      <a class="glcCmpnt" id="glcBubble"></a>
+
+      <a class="kroonCmpnt" id="kroon"></a>
+      <a class="kroonCmpnt" id="kroonBubble"></a>
+
+      <a class="roomCmpnt" id="room"></a>
+      <a class="roomCmpnt"id="roomBubble"></a>
+      <a id="roomOffset"></a>
+      <a class="lawCmpnt" id="law1"></a>
+      <a class="lawCmpnt" id="law2"></a>
+      <a class="lawCmpnt" id="lawBubble"></a>
+
+      <a class="starrCmpnt" id="starrTop"></a>
+      <a class="starrCmpnt" id="starrMid1"></a>
+      <a class="starrCmpnt" id="starrMid2"></a>
+      <a class="starrCmpnt" id="starrBubble"></a>
+      <a class="starrCmpnt" id="starrBase"></a>
+      <a class="starrCmpnt" id="starrBubble"></a>
+
+      <a class="bassCmpnt" id="bassTop"></a>
+      <a class="bassCmpnt" id="bassMid1"></a>
+      <a class="bassCmpnt" id="bassMid2"></a>
+      <a class="bassCmpnt" id="bassBase"></a>
+      <a class="bassCmpnt" id="bassBubble"></a>
+
+      <a class="phelpsCmpnt" id="phelps"></a>
+      <a class="phelpsCmpnt" id="phelpsBubble"></a>
+
+      <a class="haasCmpnt" id="haasTop"></a>
+      <a class="haasCmpnt" id="haasBase"></a>
+      <a class="haasCmpnt" id="haasBubble"></a>
+
+      <div class="popUp1"> 
+        <span class="closebtn">&times;</span>
+        <span id="popUpTitle">hi</span>
+        <span id="message">hello</span>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+    .haasCmpnt, .phelpsCmpnt, .bassCmpnt, .starrCmpnt, .lawCmpnt {
+      -webkit-tap-highlight-color: transparent;
+    }
+    .map{
+      border-radius: 15px;
+      display: block;
+      margin: 0 auto;
+      width: 100%; 
+      height: 100%; 
+    }
+    .mapWrapper{
+      margin: 0 auto;
+      margin-bottom: 40px; 
+      position: relative;
+      width: 85vw; 
+      height: 90vh; 
+    }
+    #glc1 {
+      height: 7.7%;
+      width: 13.8%;
+      position: absolute;
+      left: 55.2%;
+      top: 58%;
+      border-radius: 96% 120% 150% 180%;
+    }
+    #glc2 { 
+      width: 11%; 
+      height: 7.5%;
+      left: 50.5%;
+      top: 60%;
+      position: absolute; 
+      /* top-left | top-right | bottom-right | bottom-left */
+      border-radius: 0% 110% 0% 110%;
+    }
+    #glcBubble{
+      height: 12.4%;
+      width: 22.5%;
+      position: absolute;
+      left: 68.9%;
+      top: 42.8%;
+      border-radius: 50%;
+    }
+    #kroon {
+      height: 10%;
+      width: 15.25%;
+      position: absolute;
+      left: 37.7%;
+      top: 20.3%;
+      border-radius: 60% 60% 0% 0% ;
+    }
+    #kroonBubble{
+      height: 12.35%;
+      width: 22.4%;
+      position: absolute;
+      left: 4.8%;
+      top: 18.8%;
+      border-radius: 50%;
+    }
+    #room {
+      height: 7.1%;
+      width: 20.5%;
+      position: absolute;
+      left: 72.4%;
+      top: 28.3%;
+      z-index: 1;
+      border-radius: 0% 0% 0% 0%;
+    }
+    #roomOffset {
+      height: 1.4%;
+      width: 12.5%;
+      position: absolute;
+      left: 73.4%;
+      top: 33.9%;
+      z-index: 2; 
+      border-radius: 0% 0% 0% 0%;
+    }
+    #roomBubble {
+      height: 12.6%;
+      width: 22.65%;
+      position: absolute;
+      left: 71.5%;
+      top: 15.5%;
+      border-radius: 50%;
+    }
+    #law1 {
+      height: 6.9%;
+      width: 2.8%;
+      position: absolute;
+      left: 26%;
+      top: 56.85%;
+    }
+    #law2 {
+      height: 6.4%;
+      width: 14%;
+      position: absolute;
+      left: 26%;
+      top: 57.4%;
+      border-top-right-radius: 48%;
+    }
+    #lawBubble { 
+      height: 12.3%;
+      width: 22.4%;
+      position: absolute;
+      left: 1.25%;
+      top: 38.85%;
+      border-radius: 50%;
+    }
+    #starrTop {
+      height: 1.8%;
+      width: 7.9%;
+      position: absolute;
+      left: 35.2%;
+      top: 64.3%;
+      border-top-right-radius: 0%;
+    }
+    #starrMid1 {
+      height: 6%;
+      width: 15%;
+      position: absolute;
+      left: 31.2%;
+      top: 65.85%;
+      border-top-right-radius: 0%;
+    }
+    #starrMid2{
+      height: 2.6%;
+      width: 16%;
+      position: absolute;
+      left: 30.7%;
+      top: 71.85%;
+      border-top-right-radius: 0%;
+    }
+    #starrBase {
+      height: 3.95%;
+      width: 21.55%;
+      position: absolute;
+      left: 27.8%;
+      top: 74.2%;
+      border-top-right-radius: 0%;
+    }
+    #starrBubble {
+      height: 12.3%;
+      width: 22.4%;
+      position: absolute;
+      left: 36%;
+      top: 44.7%;
+      border-radius: 50%;
+    }
+    #bassTop {
+      height: 2.1%;
+      width: 5.6%;
+      position: absolute;
+      left: 54%;
+      top: 71%;
+      border-radius: 60% 60% 0% 00%; 
+    }
+    #bassMid1 {
+      height: 3.6%;
+      width: 7.3%;
+      position: absolute;
+      left: 53.2%;
+      top: 73.2%;
+      border-radius: 10% 0% 60% 80%; 
+    }
+    #bassMid2 {
+      height: 1.8%;
+      width: 4%;
+      position: absolute;
+      transform: rotate(270deg);
+      left: 58.8%;
+      top: 73.8%;
+      border-radius: 10% 0% 80% 80%; 
+    }
+    #bassBase {
+      height: .6%;
+      width: 9%;
+      position: absolute;
+      left: 53.2%;
+      top: 76.71%;
+      border-radius: 30% 30% 30% 30%; 
+    }
+    #bassBubble {
+      height: 12.4%;
+      width: 22.5%;
+      position: absolute;
+      left: 71.3%;
+      top: 65.6%;
+      border-radius: 50%;
+    }
+    #phelps {
+      border-radius: 50% 50% 0% 0%;
+      height: 8.3%;
+      width: 11.6%;
+      position: absolute;
+      left: 52.6%;
+      top: 78.9%;
+    }
+    #phelpsBubble {
+      height: 12.4%;
+      width: 22.5%;
+      position: absolute;
+      left: 77.7%;
+      top: 81.5%;
+      border-radius: 50%;
+    }
+    #haasTop {
+      border-radius: 48% 48% 40% 40%;
+      height: 5%;
+      width: 12%;
+      position: absolute;
+      left: 20%;
+      top: 84.7%;
+    }
+    #haasBase {
+      border-radius: 40% 40% 40% 40%;
+      height: 2.5%;
+      width: 8%;
+      position: absolute;
+      left: 22%;
+      top: 89.7%;
+    }
+    #haasBubble {
+      height: 12.4%;
+      width: 22.5%;
+      position: absolute;
+      left: .1%;
+      top: 66%;
+      border-radius: 50%;
+    }
+    .popUp1 {
+      clear:both; 
+      transition:max-height 3s ease-out;
+      max-height: 80%;
+      display: flex;
+      flex-direction: column; 
+      transition: flex 3s ease-out;
+      background-color: 	rgba(77, 127, 164, 0.829);
+      padding: 1vh 2vw;
+      padding-bottom: 2vh;
+      height: 0%;
+      overflow: hidden;
+      z-index: -1;
+      width: 0%;
+      color: rgb(5, 6, 49);
+      top: 22%;
+      left: 10%;
+      position: absolute;
+      border-radius: 30px/10px;
+      padding-right: 3vw;
+    }
+    #popUpTitle {
+     color: whitesmoke;
+     font-family: benton-sans, sans-serif;
+     font-weight: bolder;
+     font-size: 4vw;
+     text-align: center;
+    }
+    .closebtn {
+      text-align: right;
+      top: -4%;
+      font-size: 1.5em;
+      font-weight: bolder;
+      color: whitesmoke;
+      position: relative;
+    }
+    #message {
+      text-align: center;
+      top: -5%;
+      line-height: 140%;
+      overflow: scroll;
+      font-size: 3vw;
+      font-family: benton-sans, sans-serif;
+      color: whitesmoke;
+    }
+    @media (max-width: 1100px) {
+      .desktopMap {
+          display: none;
+      }
+    }
+    @media (min-width: 1101px) {
+      .mobileMap {
+        display: none;
+      }
+      .desktopMap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 5vw;
+ 
+        font-family: benton-sans, sans-serif;
+        margin-bottom: 40px;
+      }
+      .popUp1{
+        height: auto;
+        width: 75%;
+        z-index: 3;
+        transition:max-height 0.3s ease-out;
+        max-height: 80vh;
+        margin-top: 6%;
+        padding-top: 6%;
+        padding-bottom: 6%;
+        background-color: rgba(77, 126, 164, 0.753);
+        overflow: visible;
+        border-radius: 15px;
+        box-shadow: 10px 5px 5px rgba(48, 46, 46, 0.616);
+      
+      }
+      #dsktpMsg {
+        display: none;
+        text-transform: none;
+        font-weight: normal;
+        font-size: 1.4vw;
+        overflow: scroll;
+        text-align: center;
+        top: -5%;
+        margin-top: 2%;
+        line-height: 140%;
+        overflow: hidden;
+        font-family: benton-sans, sans-serif;
+        color: whitesmoke;
+      }
+      #dsktpTitle{
+        display: none;
+        text-transform: none;
+        overflow: visible;
+        height: auto;
+        padding-bottom: 2%;
+        font-weight: normal;
+        font-size: 2.2vw;
+        color: whitesmoke;
+        top: -10%;
+        overflow: hidden;
+        font-family: benton-sans, sans-serif;
+        font-weight: bolder;
+        text-align: center;
+      }
+      #startMsg{
+        text-align: center; 
+        line-height: auto;
+        color: whitesmoke;
+      }
+
+      .closebtn {
+        text-align: right;
+        top: -4%;
+        font-size: 1.7em;
+        font-weight: bolder;
+        color: whitesmoke;
+        position: relative;
+      }
+ 
+      .mapWrapper{
+        height: 90vh;
+      }
+      
+      .leftBox{
+        text-align: center;
+        text-transform: none;
+        font-weight: bolder;
+        font-size: 2.5vw;
+        background-image: radial-gradient(#202c4d 5%, transparent 6%),
+        radial-gradient(#ffffff 5%, transparent 6%);
+        background-color: #797272;
+        border-radius: 15px;
+        background-position: 0 0, 20px 20px;
+        background-size: 10px 10px;
+        color: whitesmoke;
+        height: 90vh;
+        width: 50vw; 
+        display: flex;
+        padding: 3% 2%;
+        align-items: center; 
+        flex-direction: column;
+      }
+      .mapWrapper {
+      
+        float: right;
+        margin: 0%;
+        width: 35%;
+      }
+    
+    }
+  </style>
+  <script>
+    let dict = {
+      glc: ["The GLC:", "You’re definitely the parent of your friend group. Laurie Santos is your hero, and you take your meditating and gratitude journaling VERY seriously. You seem zen on the outside, but the free tea in the GLC lounge is all that is holding you together right now."],
+      starr:["Starr Reading Room:", "You’re probably a work hard, play hard humanities type who prefers to work in bone-rattling silence and is VERY willing to throw your DS book at anyone who dares to type too loudly in Starr. You wear your going out clothes to the library on Wednesday nights to maximize efficiency (Woads is right across the street)."],
+      bass: ["Bass:", "For all intents and purposes, you are nocturnal. Your suitemates wouldn’t know if you were still alive if it weren’t for the mountain of Blue State cups rising from the common room garbage can. You probably have vitamin D deficiency."],
+      kroon:["Kroon Hall:","You will find any excuse in conversation to show off your Chaco/Teva/Birkenstock tan lines, and you tried to teach your whole FOOT group how they could purify their urine to consume as drinking water. Your favorite dining hall food is hummus."],
+      law: ["Law Library:", "Your first words were probably Marbury vs. Madison or some shit like that. While everyone else was studying for the SAT, you were already doing LSAT prep. You’re low-key ripped from carrying around your Con Law textbook."],
+      phelps: ["Your Room:", "I have never done this without “accidentally” taking a six-hour nap on my bed, so honestly just good for you."],
+      room: ["Your Childhood Bedroom:", "There’s a pandemic."],
+      haas: ["Haas:", "You definitely cuff both your beanies and your jeans. All your Instagram pictures were taken on 35mm film, and you make sure everybody knows it. You like to describe things as postmodern, and your greatest fear is that someone will find out that you actually have no idea what that means."]
+    };
+    
+    function clearBox(mediaType) {
+      let startMsg = document.getElementById("startMsg");
+      if (startMsg) {
+        startMsg.parentNode.removeChild(startMsg);
+      }
+      if (mediaType === "mobile") {
+        $("#message").text("");
+        $("#popUpTitle").text("");
+        $("#dsktpTitle").text("");
+        $("#dsktpMsg").text("");
+      }
+      $("#dsktpTitle").css({
+        "display": "block "
+      });
+      $("#dsktpMsg").css({
+        "display": "block "
+      });
+      if ($(".popUp1").height() > 0 ) {
+        $(".popUp1").animate({
+          height: 0,
+          width : 0
+        });
+      }
+      $(".popUp1").css({
+         "z-index": "3"
+      });
+    }
+  $(document).ready(function () {
+
+
+    $(".roomCmpnt").click(function(){
+      clearBox("mobile");
+    
+      $("#message").css({
+        "margin-top": "3%",
+        "text-align": "center"
+      });
+
+      $("#dsktpMsg").css({
+        "margin-top": "3%"
+      });
+
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight
+         }, 200, 
+         function(){
+          $(this).height('auto');
+          $("#popUpTitle").text(dict.room[0]);
+          $("#message").text(dict.room[1]); 
+        }
+      );
+      $("#dsktpTitle").text(dict.room[0]);
+      $("#dsktpMsg").text(dict.room[1]);
+    });
+
+    $(".kroonCmpnt").click(function(){
+      /*$("#popUpTitle").text(dict.kroon[0]);
+      $("#message").text(dict.kroon[1]);
+      $("#dsktpTitle").text(dict.kroon[0]);
+      $("#dsktpMsg").text(dict.kroon[1]);
+      $(".popUp1").css({
+         "z-index": "3",
+      });
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight
+      }, 1000,function(){
+               $(this).height('auto');});*/
+
+      clearBox("mobile");
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.kroon[1]);
+            $("#popUpTitle").text(dict.kroon[0]);
+       }); 
+      $("#dsktpTitle").text(dict.kroon[0]);
+      $("#dsktpMsg").text(dict.kroon[1]);
+    });
+
+
+
+
+    $(".lawCmpnt").click(function(){
+      /*$("#popUpTitle").text(dict.law[0]);
+      $("#message").text(dict.law[1]);
+      $("#dsktpTitle").text(dict.law[0]);
+      $("#dsktpMsg").text(dict.law[1]);
+      $(".popUp").css({
+         "z-index": "3",
+      });
+      $(".popUp").animate({
+        "width": "80%",
+        "height": "30%"
+      });*/
+      clearBox("mobile");
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.law[1]);
+            $("#popUpTitle").text(dict.law[0]);
+      });
+      $("#dsktpTitle").text(dict.law[0]);
+      $("#dsktpMsg").text(dict.law[1]); 
+    });
+
+    $(".haasCmpnt").click(function(){
+      /*$("#popUpTitle").text(dict.haas[0]);
+      $("#message").text(dict.haas[1]);
+      $("#dsktpTitle").text(dict.haas[0]);
+      $("#dsktpMsg").text(dict.haas[1]);
+      $(".popUp").css({
+         "z-index": "3",
+         "height": "auto"
+      });
+      $(".popUp").animate({
+        "width": "80%",
+        
+      });*/
+      clearBox("mobile");
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.haas[1]);
+            $("#popUpTitle").text(dict.haas[0]);
+      }); 
+      $("#dsktpTitle").text(dict.haas[0]);
+      $("#dsktpMsg").text(dict.haas[1]);
+
+
+    });
+
+
+    $(".bassCmpnt").click(function(){
+      /*$("#popUpTitle").text(dict.bass[0]);
+      $("#message").text(dict.bass[1]);
+      $("#dsktpTitle").text(dict.bass[0]);
+      $("#dsktpMsg").text(dict.bass[1]);
+      $(".popUp").css({
+         "z-index": "3",
+         "height": "auto"
+      });
+      $(".popUp").animate({
+        "width": "80%"
+      });*/
+      clearBox("mobile");
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.bass[1]);
+            $("#popUpTitle").text(dict.bass[0]);
+       }); 
+      $("#dsktpTitle").text(dict.bass[0]);
+      $("#dsktpMsg").text(dict.bass[1]);
+    });
+
+
+    $(".phelpsCmpnt").click(function(){
+      /*$("#popUpTitle").text(dict.phelps[0]);
+      $("#message").text(dict.phelps[1]);
+      $("#dsktpTitle").text(dict.phelps[0]);
+      $("#dsktpMsg").text(dict.phelps[1]);
+      $(".popUp").css({
+         "z-index": "3",
+      });
+      $(".popUp").animate({
+        "width": "80%",
+        "height": "25%"
+      });*/
+      clearBox("mobile");
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.phelps[1]);
+            $("#popUpTitle").text(dict.phelps[0]);
+       }); 
+      $("#dsktpTitle").text(dict.phelps[0]);
+      $("#dsktpMsg").text(dict.phelps[1]);
+    });
+
+
+    $(".starrCmpnt").click(function(){
+      /*$("#popUpTitle").text(dict.starr[0]);
+      $("#message").text(dict.starr[1]);
+      $("#dsktpTitle").text(dict.starr[0]);
+      $("#dsktpMsg").text(dict.starr[1]);
+      $(".popUp").css({
+         "z-index": "3",
+         "display": "flex"
+      });
+      $(".popUp").animate({
+        "width": "80%",
+        "height": "37%"
+      });*/
+      clearBox("mobile");
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.starr[1]);
+            $("#popUpTitle").text(dict.starr[0]);
+       }); 
+      $("#dsktpTitle").text(dict.starr[0]);
+      $("#dsktpMsg").text(dict.starr[1]);
+    });
+
+
+    $(".glcCmpnt").click(function(){
+      /*$("#popUpTitle").text(dict.glc[0]);
+      $("#message").text(dict.glc[1]);
+      $("#dsktpTitle").text(dict.glc[0]);
+      $("#dsktpMsg").text(dict.glc[1]);
+      $(".popUp").css({
+         "z-index": "3",
+      });
+      $(".popUp").animate({
+        "width": "80%",
+        "height": "31%"
+      });*/
+      clearBox("mobile");
+      $(".popUp1").animate({
+        "width": "80%",
+        height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.glc[1]);
+            $("#popUpTitle").text(dict.glc[0]);
+          }
+      ); 
+      $("#dsktpTitle").text(dict.glc[0]);
+      $("#dsktpMsg").text(dict.glc[1]);   
+      
+
+    });
+
+    $(".closebtn").click(function() {
+      $(".popUp1").animate({
+        "width": "0",
+        "z-index": "-1",
+        "height" : "0",
+     });
+      /*$(".popUp").css({
+         "display": "none"
+      });*/
+    });
+  });
+  </script>
+
+  <!-- Yale Cannot Heal Homesickness-->
   <a class="link-wrap" href="https://yaledailynews.com/">
     <article class="story articlecontainer" style="background-image: url({{stories.WKND.9.imageURL}}); ">
         <div class="darkenimage">
@@ -180,7 +928,7 @@
   </a>
 
   <!-- GRAPHIC: TAG YOURSELF: RES COLLEGE EDITION -->
-  <img src="/public/imgs/WKND/WKND3.jpg" class="alignmentchart">
+  <img src="/public/imgs/WKND/Isabella huang resmeme.png" class="extra">
 
   <!-- 83 steps -->
   <a class="link-wrap" href="https://yaledailynews.com/">
