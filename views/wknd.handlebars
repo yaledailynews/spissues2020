@@ -11,9 +11,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="Spissues 2020, design based on 2019 Year in Review and 2014 HY site">
-
     <title>WKND</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -167,7 +164,7 @@
       </div>
     </div>
     <div class="mapWrapper">
-      <img class="map" src="/public/imgs/wknd/map.PNG" />
+      <img class="desktopMapImg" src="/public/imgs/wknd/map.PNG" />
 
       <a class="glcCmpnt" id="glc1"></a>
       <a class="glcCmpnt" id="glc2"></a>
@@ -206,7 +203,7 @@
   </div>
   <div class="mobileMap">
     <div class="mapWrapper">
-      <img class="map" src="/public/imgs/wknd/mobileMap.PNG" />
+      <img class="mobileMapImg" src="/public/imgs/wknd/mobileMap.PNG" />
 
       <a class="glcCmpnt" id="glc1"></a>
       <a class="glcCmpnt" id="glc2"></a>
@@ -250,13 +247,224 @@
     </div>
   </div>
 
+  <!-- Yale Cannot Heal Homesickness-->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.9.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.9.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.9.authors}}</div>
+        </div>  
+    </article>
+  </a>
 
-  <style>
-    .haasCmpnt, .phelpsCmpnt, .bassCmpnt, .starrCmpnt, .lawCmpnt {
+  <!-- New Here -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.10.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.10.title}}</h1>
+          <div class="articleauthor">By {{stories.WKND.10.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- GRAPHIC: TAG YOURSELF: RES COLLEGE EDITION -->
+  <img src="/public/imgs/WKND/Isabella huang resmeme.png" class="extra">
+
+  <!-- 83 steps -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.11.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.11.title}}</h1>
+          <div class="articleauthor">By {{stories.WKND.11.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+  <!-- When home comes to your home away from home -->
+  <a class="link-wrap" href="https://yaledailynews.com/">
+    <article class="story articlecontainer" style="background-image: url({{stories.WKND.12.imageURL}}); ">
+        <div class="darkenimage">
+          <h1 class="articletext">{{stories.WKND.12.title}}</h1>
+          <div id="author_op" class="articleauthor">By {{stories.WKND.12.authors}}</div>
+        </div>  
+    </article>
+  </a>
+
+
+  <script>
+    let dict = {
+      glc: ["The GLC:", "You’re definitely the parent of your friend group. Laurie Santos is your hero, and you take your meditating and gratitude journaling VERY seriously. You seem zen on the outside, but the free tea in the GLC lounge is all that is holding you together right now."],
+      starr:["Starr Reading Room:", "You’re probably a work hard, play hard humanities type who prefers to work in bone-rattling silence and is VERY willing to throw your DS book at anyone who dares to type too loudly in Starr. You wear your going out clothes to the library on Wednesday nights to maximize efficiency (Woads is right across the street)."],
+      bass: ["Bass:", "For all intents and purposes, you are nocturnal. Your suitemates wouldn’t know if you were still alive if it weren’t for the mountain of Blue State cups rising from the common room garbage can. You probably have vitamin D deficiency."],
+      kroon:["Kroon Hall:","You will find any excuse in conversation to show off your Chaco/Teva/Birkenstock tan lines, and you tried to teach your whole FOOT group how they could purify their urine to consume as drinking water. Your favorite dining hall food is hummus."],
+      law: ["Law Library:", "Your first words were probably Marbury vs. Madison or some shit like that. While everyone else was studying for the SAT, you were already doing LSAT prep. You’re low-key ripped from carrying around your Con Law textbook."],
+      phelps: ["Your Room:", "I have never done this without “accidentally” taking a six-hour nap on my bed, so honestly just good for you."],
+      room: ["Your Childhood Bedroom:", "There’s a pandemic."],
+      haas: ["Haas:", "You definitely cuff both your beanies and your jeans. All your Instagram pictures were taken on 35mm film, and you make sure everybody knows it. You like to describe things as postmodern, and your greatest fear is that someone will find out that you actually have no idea what that means."]
+    };
+    
+    function clearBox() {
+      let startMsg = document.getElementById("startMsg");
+      if (startMsg) {
+        startMsg.parentNode.removeChild(startMsg);
+      }
+        $("#message").text("");
+        $("#popUpTitle").text("");
+        $("#dsktpTitle").text("");
+        $("#dsktpMsg").text("");
+        
+      $("#dsktpTitle").css({
+        "display": "block "
+      });
+      $("#dsktpMsg").css({
+        "display": "block "
+      });
+      if ($(".popUp1").height() > 0 ) {
+        $(".popUp1").animate({
+          height: 0,
+          width : 0
+        });
+      }
+      $(".popUp1").css({
+         "z-index": "3"
+      });
+    }
+  $(document).ready(function () {
+
+    $(".roomCmpnt").click(function(){
+      clearBox();
+      $("#message").css({
+        "margin-top": "3%",
+        "text-align": "center"
+      });
+      $("#dsktpMsg").css({
+        "margin-top": "3%"
+      });
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight
+         }, 200, 
+         function(){
+          $(this).height('auto');
+          $("#popUpTitle").text(dict.room[0]);
+          $("#message").text(dict.room[1]); 
+        }
+      );
+      $("#dsktpTitle").text(dict.room[0]);
+      $("#dsktpMsg").text(dict.room[1]);
+    });
+
+    $(".kroonCmpnt").click(function(){
+      clearBox();
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.kroon[1]);
+            $("#popUpTitle").text(dict.kroon[0]);
+       }); 
+      $("#dsktpTitle").text(dict.kroon[0]);
+      $("#dsktpMsg").text(dict.kroon[1]);
+    });
+
+    $(".lawCmpnt").click(function(){
+      clearBox();
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.law[1]);
+            $("#popUpTitle").text(dict.law[0]);
+      });
+      $("#dsktpTitle").text(dict.law[0]);
+      $("#dsktpMsg").text(dict.law[1]); 
+    });
+
+    $(".haasCmpnt").click(function(){
+      clearBox();
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.haas[1]);
+            $("#popUpTitle").text(dict.haas[0]);
+      }); 
+      $("#dsktpTitle").text(dict.haas[0]);
+      $("#dsktpMsg").text(dict.haas[1]);
+    });
+
+    $(".bassCmpnt").click(function(){
+      clearBox();
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.bass[1]);
+            $("#popUpTitle").text(dict.bass[0]);
+       }); 
+      $("#dsktpTitle").text(dict.bass[0]);
+      $("#dsktpMsg").text(dict.bass[1]);
+    });
+    $(".phelpsCmpnt").click(function(){
+      clearBox();
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.phelps[1]);
+            $("#popUpTitle").text(dict.phelps[0]);
+       }); 
+      $("#dsktpTitle").text(dict.phelps[0]);
+      $("#dsktpMsg").text(dict.phelps[1]);
+    });
+
+    $(".starrCmpnt").click(function(){
+      clearBox();
+      $(".popUp1").animate({
+        "width": "80%",
+         height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.starr[1]);
+            $("#popUpTitle").text(dict.starr[0]);
+       }); 
+      $("#dsktpTitle").text(dict.starr[0]);
+      $("#dsktpMsg").text(dict.starr[1]);
+    });
+
+    $(".glcCmpnt").click(function(){
+      clearBox();
+      $(".popUp1").animate({
+        "width": "80%",
+        height: $('.popUp1').get(0).scrollHeight}, 200,
+          function(){
+            $(this).height('auto');
+            $("#message").text(dict.glc[1]);
+            $("#popUpTitle").text(dict.glc[0]);
+          }
+      ); 
+      $("#dsktpTitle").text(dict.glc[0]);
+      $("#dsktpMsg").text(dict.glc[1]);   
+    });
+    $(".closebtn").click(function() {
+      $(".popUp1").animate({
+        "width": "0",
+        "z-index": "-1",
+        "height" : "0",
+     });
+    });
+  });
+  </script>
+    <style>
+    .haasCmpnt, .phelpsCmpnt, .bassCmpnt, .starrCmpnt, .lawCmpnt, .roomCmpnt, .glcCmpnt, .kroonCmpnt {
       -webkit-tap-highlight-color: transparent;
     }
-    .map{
-      border-radius: 15px;
+    .mobileMapImg{
       display: block;
       margin: 0 auto;
       width: 100%; 
@@ -481,8 +689,6 @@
       border-radius: 50%;
     }
     .popUp1 {
-      clear:both; 
-      transition:max-height 3s ease-out;
       max-height: 80%;
       display: flex;
       flex-direction: column; 
@@ -494,15 +700,14 @@
       overflow: hidden;
       z-index: -1;
       width: 0%;
-      color: rgb(5, 6, 49);
       top: 22%;
       left: 10%;
+      color: whitesmoke;
       position: absolute;
       border-radius: 30px/10px;
       padding-right: 3vw;
     }
     #popUpTitle {
-     color: whitesmoke;
      font-family: benton-sans, sans-serif;
      font-weight: bolder;
      font-size: 4vw;
@@ -513,7 +718,6 @@
       top: -4%;
       font-size: 1.5em;
       font-weight: bolder;
-      color: whitesmoke;
       position: relative;
     }
     #message {
@@ -523,13 +727,14 @@
       overflow: scroll;
       font-size: 3vw;
       font-family: benton-sans, sans-serif;
-      color: whitesmoke;
+      
     }
     @media (max-width: 1100px) {
       .desktopMap {
           display: none;
       }
     }
+
     @media (min-width: 1101px) {
       .mobileMap {
         display: none;
@@ -543,6 +748,13 @@
  
         font-family: benton-sans, sans-serif;
         margin-bottom: 40px;
+      }
+      .mobileMapImg{
+        display: block;
+        margin: 0 auto;
+        width: 100%; 
+        height: 100%; 
+        border-radius: 15px;
       }
       .popUp1{
         height: auto;
@@ -627,327 +839,11 @@
         flex-direction: column;
       }
       .mapWrapper {
-      
         float: right;
         margin: 0%;
         width: 35%;
       }
     
     }
-  </style>
-  <script>
-    let dict = {
-      glc: ["The GLC:", "You’re definitely the parent of your friend group. Laurie Santos is your hero, and you take your meditating and gratitude journaling VERY seriously. You seem zen on the outside, but the free tea in the GLC lounge is all that is holding you together right now."],
-      starr:["Starr Reading Room:", "You’re probably a work hard, play hard humanities type who prefers to work in bone-rattling silence and is VERY willing to throw your DS book at anyone who dares to type too loudly in Starr. You wear your going out clothes to the library on Wednesday nights to maximize efficiency (Woads is right across the street)."],
-      bass: ["Bass:", "For all intents and purposes, you are nocturnal. Your suitemates wouldn’t know if you were still alive if it weren’t for the mountain of Blue State cups rising from the common room garbage can. You probably have vitamin D deficiency."],
-      kroon:["Kroon Hall:","You will find any excuse in conversation to show off your Chaco/Teva/Birkenstock tan lines, and you tried to teach your whole FOOT group how they could purify their urine to consume as drinking water. Your favorite dining hall food is hummus."],
-      law: ["Law Library:", "Your first words were probably Marbury vs. Madison or some shit like that. While everyone else was studying for the SAT, you were already doing LSAT prep. You’re low-key ripped from carrying around your Con Law textbook."],
-      phelps: ["Your Room:", "I have never done this without “accidentally” taking a six-hour nap on my bed, so honestly just good for you."],
-      room: ["Your Childhood Bedroom:", "There’s a pandemic."],
-      haas: ["Haas:", "You definitely cuff both your beanies and your jeans. All your Instagram pictures were taken on 35mm film, and you make sure everybody knows it. You like to describe things as postmodern, and your greatest fear is that someone will find out that you actually have no idea what that means."]
-    };
-    
-    function clearBox(mediaType) {
-      let startMsg = document.getElementById("startMsg");
-      if (startMsg) {
-        startMsg.parentNode.removeChild(startMsg);
-      }
-      if (mediaType === "mobile") {
-        $("#message").text("");
-        $("#popUpTitle").text("");
-        $("#dsktpTitle").text("");
-        $("#dsktpMsg").text("");
-      }
-      $("#dsktpTitle").css({
-        "display": "block "
-      });
-      $("#dsktpMsg").css({
-        "display": "block "
-      });
-      if ($(".popUp1").height() > 0 ) {
-        $(".popUp1").animate({
-          height: 0,
-          width : 0
-        });
-      }
-      $(".popUp1").css({
-         "z-index": "3"
-      });
-    }
-  $(document).ready(function () {
-
-
-    $(".roomCmpnt").click(function(){
-      clearBox("mobile");
-    
-      $("#message").css({
-        "margin-top": "3%",
-        "text-align": "center"
-      });
-
-      $("#dsktpMsg").css({
-        "margin-top": "3%"
-      });
-
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight
-         }, 200, 
-         function(){
-          $(this).height('auto');
-          $("#popUpTitle").text(dict.room[0]);
-          $("#message").text(dict.room[1]); 
-        }
-      );
-      $("#dsktpTitle").text(dict.room[0]);
-      $("#dsktpMsg").text(dict.room[1]);
-    });
-
-    $(".kroonCmpnt").click(function(){
-      /*$("#popUpTitle").text(dict.kroon[0]);
-      $("#message").text(dict.kroon[1]);
-      $("#dsktpTitle").text(dict.kroon[0]);
-      $("#dsktpMsg").text(dict.kroon[1]);
-      $(".popUp1").css({
-         "z-index": "3",
-      });
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight
-      }, 1000,function(){
-               $(this).height('auto');});*/
-
-      clearBox("mobile");
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight}, 200,
-          function(){
-            $(this).height('auto');
-            $("#message").text(dict.kroon[1]);
-            $("#popUpTitle").text(dict.kroon[0]);
-       }); 
-      $("#dsktpTitle").text(dict.kroon[0]);
-      $("#dsktpMsg").text(dict.kroon[1]);
-    });
-
-
-
-
-    $(".lawCmpnt").click(function(){
-      /*$("#popUpTitle").text(dict.law[0]);
-      $("#message").text(dict.law[1]);
-      $("#dsktpTitle").text(dict.law[0]);
-      $("#dsktpMsg").text(dict.law[1]);
-      $(".popUp").css({
-         "z-index": "3",
-      });
-      $(".popUp").animate({
-        "width": "80%",
-        "height": "30%"
-      });*/
-      clearBox("mobile");
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight}, 200,
-          function(){
-            $(this).height('auto');
-            $("#message").text(dict.law[1]);
-            $("#popUpTitle").text(dict.law[0]);
-      });
-      $("#dsktpTitle").text(dict.law[0]);
-      $("#dsktpMsg").text(dict.law[1]); 
-    });
-
-    $(".haasCmpnt").click(function(){
-      /*$("#popUpTitle").text(dict.haas[0]);
-      $("#message").text(dict.haas[1]);
-      $("#dsktpTitle").text(dict.haas[0]);
-      $("#dsktpMsg").text(dict.haas[1]);
-      $(".popUp").css({
-         "z-index": "3",
-         "height": "auto"
-      });
-      $(".popUp").animate({
-        "width": "80%",
-        
-      });*/
-      clearBox("mobile");
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight}, 200,
-          function(){
-            $(this).height('auto');
-            $("#message").text(dict.haas[1]);
-            $("#popUpTitle").text(dict.haas[0]);
-      }); 
-      $("#dsktpTitle").text(dict.haas[0]);
-      $("#dsktpMsg").text(dict.haas[1]);
-
-
-    });
-
-
-    $(".bassCmpnt").click(function(){
-      /*$("#popUpTitle").text(dict.bass[0]);
-      $("#message").text(dict.bass[1]);
-      $("#dsktpTitle").text(dict.bass[0]);
-      $("#dsktpMsg").text(dict.bass[1]);
-      $(".popUp").css({
-         "z-index": "3",
-         "height": "auto"
-      });
-      $(".popUp").animate({
-        "width": "80%"
-      });*/
-      clearBox("mobile");
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight}, 200,
-          function(){
-            $(this).height('auto');
-            $("#message").text(dict.bass[1]);
-            $("#popUpTitle").text(dict.bass[0]);
-       }); 
-      $("#dsktpTitle").text(dict.bass[0]);
-      $("#dsktpMsg").text(dict.bass[1]);
-    });
-
-
-    $(".phelpsCmpnt").click(function(){
-      /*$("#popUpTitle").text(dict.phelps[0]);
-      $("#message").text(dict.phelps[1]);
-      $("#dsktpTitle").text(dict.phelps[0]);
-      $("#dsktpMsg").text(dict.phelps[1]);
-      $(".popUp").css({
-         "z-index": "3",
-      });
-      $(".popUp").animate({
-        "width": "80%",
-        "height": "25%"
-      });*/
-      clearBox("mobile");
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight}, 200,
-          function(){
-            $(this).height('auto');
-            $("#message").text(dict.phelps[1]);
-            $("#popUpTitle").text(dict.phelps[0]);
-       }); 
-      $("#dsktpTitle").text(dict.phelps[0]);
-      $("#dsktpMsg").text(dict.phelps[1]);
-    });
-
-
-    $(".starrCmpnt").click(function(){
-      /*$("#popUpTitle").text(dict.starr[0]);
-      $("#message").text(dict.starr[1]);
-      $("#dsktpTitle").text(dict.starr[0]);
-      $("#dsktpMsg").text(dict.starr[1]);
-      $(".popUp").css({
-         "z-index": "3",
-         "display": "flex"
-      });
-      $(".popUp").animate({
-        "width": "80%",
-        "height": "37%"
-      });*/
-      clearBox("mobile");
-      $(".popUp1").animate({
-        "width": "80%",
-         height: $('.popUp1').get(0).scrollHeight}, 200,
-          function(){
-            $(this).height('auto');
-            $("#message").text(dict.starr[1]);
-            $("#popUpTitle").text(dict.starr[0]);
-       }); 
-      $("#dsktpTitle").text(dict.starr[0]);
-      $("#dsktpMsg").text(dict.starr[1]);
-    });
-
-
-    $(".glcCmpnt").click(function(){
-      /*$("#popUpTitle").text(dict.glc[0]);
-      $("#message").text(dict.glc[1]);
-      $("#dsktpTitle").text(dict.glc[0]);
-      $("#dsktpMsg").text(dict.glc[1]);
-      $(".popUp").css({
-         "z-index": "3",
-      });
-      $(".popUp").animate({
-        "width": "80%",
-        "height": "31%"
-      });*/
-      clearBox("mobile");
-      $(".popUp1").animate({
-        "width": "80%",
-        height: $('.popUp1').get(0).scrollHeight}, 200,
-          function(){
-            $(this).height('auto');
-            $("#message").text(dict.glc[1]);
-            $("#popUpTitle").text(dict.glc[0]);
-          }
-      ); 
-      $("#dsktpTitle").text(dict.glc[0]);
-      $("#dsktpMsg").text(dict.glc[1]);   
-      
-
-    });
-
-    $(".closebtn").click(function() {
-      $(".popUp1").animate({
-        "width": "0",
-        "z-index": "-1",
-        "height" : "0",
-     });
-      /*$(".popUp").css({
-         "display": "none"
-      });*/
-    });
-  });
-  </script>
-
-  <!-- Yale Cannot Heal Homesickness-->
-  <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.9.imageURL}}); ">
-        <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.9.title}}</h1>
-          <div id="author_op" class="articleauthor">By {{stories.WKND.9.authors}}</div>
-        </div>  
-    </article>
-  </a>
-
-  <!-- New Here -->
-  <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.10.imageURL}}); ">
-        <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.10.title}}</h1>
-          <div class="articleauthor">By {{stories.WKND.10.authors}}</div>
-        </div>  
-    </article>
-  </a>
-
-  <!-- GRAPHIC: TAG YOURSELF: RES COLLEGE EDITION -->
-  <img src="/public/imgs/WKND/Isabella huang resmeme.png" class="extra">
-
-  <!-- 83 steps -->
-  <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.11.imageURL}}); ">
-        <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.11.title}}</h1>
-          <div class="articleauthor">By {{stories.WKND.11.authors}}</div>
-        </div>  
-    </article>
-  </a>
-
-  <!-- When home comes to your home away from home -->
-  <a class="link-wrap" href="https://yaledailynews.com/">
-    <article class="story articlecontainer" style="background-image: url({{stories.WKND.12.imageURL}}); ">
-        <div class="darkenimage">
-          <h1 class="articletext">{{stories.WKND.12.title}}</h1>
-          <div id="author_op" class="articleauthor">By {{stories.WKND.12.authors}}</div>
-        </div>  
-    </article>
-  </a>
-
+    </style>
 </body>
