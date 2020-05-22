@@ -116,7 +116,7 @@
     white-space: nowrap;
     text-transform: none;
     position: absolute;/* Stay fixed */
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -125,15 +125,15 @@
   }
   .subtitle {
     color: rgba(255, 255, 255, 1);
-    font-size: 5.5vw;
+    font-size: 3vw;
     font-style: italic;
     font-weight: bold;
     text-transform: none;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-    top: 65%;
+    top: 57%;
     left: 50%;
-    white-space: nowrap;
-    overflow: auto;
+    width: 80vw;
+    overflow: visible;
     transform: translate(-50%, -50%);
     z-index: 2;
     padding: 20px;
@@ -249,7 +249,7 @@
     .subtitle{
       top: 70%;
       font-weight: bolder;
-      font-size: 7vw; 
+      font-size: 5vw; 
     }
     .desktop{
       display: none; 
@@ -314,7 +314,7 @@
         url(public/imgs/NewsLanding_SanyaNijhawan.JPG);
     }
     #mobileSports{
-      background-position: 63% 60%; 
+      background-position: 50% 60%; 
       background-image: 
       linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
       linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000 100%),
@@ -322,8 +322,9 @@
     }
     #mobileOpinion{
       background-position: 55% 70%; 
-      background-image: linear-gradient(to bottom, rgba(12, 9, 9, 0) 60%, #000000 100%),
-      linear-gradient(to top, rgba(12, 9, 9, 0) 60%, #000000 100%),
+      filter: brightness(1.5);
+      background-image: linear-gradient(to bottom, rgba(12, 9, 9, 0) 65%, #000000 100%),
+      linear-gradient(to top, rgba(12, 9, 9, 0) 70%, #000000 100%),
       url(public/imgs/OpinionLanding_SydneyHolmes.jpeg);
     }
     #mobileWknd{
@@ -388,7 +389,7 @@
 
   <div class="headImg">
     <div class="title">First-Year Issue</div>
-    <div class="subtitle">Yale Daily News Stories</div>
+    <div class="subtitle">What you need to know about the last academic year</div>
   </div>
   <div class= "desktop">
     <div class="bg" id="one">

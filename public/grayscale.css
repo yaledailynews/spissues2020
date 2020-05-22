@@ -234,17 +234,7 @@ body {
     line-height: 120%;
     margin-bottom: 6%
 }
-.playlistText {
-    height: auto;
-    margin: auto;
-    margin-top: 2%;
-    width: 80vw;
-    font-family: ltc-bodoni-175,sans-serif;
-    font-size: 1.7vw;
-    line-height: 120%;
-    text-align: center;
-    margin-bottom: 3%;
-}
+
 .articletext {
     height: auto;
     margin: auto;
