@@ -60,7 +60,7 @@ body {
 }
 .topBar {
   background-color: rgba(49, 46, 46, 0.664);
-  height: 9vh;
+  height: auto;
   border-bottom: .08vh solid white; 
 }
 .navOptions{
@@ -73,7 +73,7 @@ body {
   list-style-type: none;
   margin: auto;
   overflow-y: auto;
-  height: 9vh;
+  height: auto;
   text-align: center; 
 } 
 .option {
@@ -88,7 +88,7 @@ body {
   display: block;
   padding: 2vh;
   font-size: 2.5vw; 
-  height: 9vh;
+  height: auto;
 }
 .navLink:hover{
   background-color: rgba(85, 82, 82);
@@ -370,7 +370,17 @@ a:focus {
 }
 
 
-
+@media only screen 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    .btn-circle {
+        top: 10vh !important; 
+    }
+    #shift {
+        top: 3vh !important;
+        width: 3vw !important;
+    }
+}
 @media(max-width:1100px) {
     .playlistText {
         top: 1.8vw; 
@@ -458,7 +468,7 @@ a:focus {
         margin-top: 10%;
     }
 }
-@media(min-width:450px) and (max-width:749px) {
+@media(min-width:450px) and (max-width:749px) and (orientation : portrait){
     #shift {
         top: 2.5vh !important;
         width: 3vw !important;
@@ -470,17 +480,17 @@ a:focus {
         display: block;
     }
     .topBar {
-        height: 6vh;
+        height: auto;
     
     }
     .navOptions{
-        height: 6vh;
+        height: auto;
     }
     .list{
-        height: 6vh;
+        height: auto;
     } 
     .navLink{
-        height: 6vh;
+        height: auto;
     }
     #site-header {
         display: block;
